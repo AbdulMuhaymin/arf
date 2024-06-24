@@ -25,7 +25,7 @@ module load apps/espresso/7.2-oneapi-2023.0
 
 ###mpirun pw.x -npool 10 < Cu_ZnS_q0.relax.in > Cu_ZnS_q0.relax.out
 ###mpirun pw.x -npool 10 < Cu_ZnS_q0.scf.start_mag2.in > Cu_ZnS_q0.scf.start_mag2.out
-mpirun pw.x -npool 10 < test.in > test.out
+mpirun pw.x -npool 10 < test2.in > test2.out
 ###mpirun pw.x -npool 10 < Cu_ZnS_q0.nscf.in > Cu_ZnS_q0.nscf.out
 ###mpirun projwfc.x < Cu_ZnS_q0.projwfc.in > Cu_ZnS_q0.projwfc.out
 
