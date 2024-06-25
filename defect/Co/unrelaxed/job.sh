@@ -23,6 +23,6 @@ module load lib/hdf5/1.14.3-oneapi-2023.0
 
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 10 < 1.Co_ZnS_q0.scf.in > 1.Co_ZnS_q0.nscf.out
-mpirun pw.x -npool 20 < 2.Co_ZnS_q0.nscf.in > 2.Co_ZnS_q0.scf.out
+mpirun pw.x -npool 10 < 1.Co_ZnS_q0.scf.in > 1.Co_ZnS_q0.scf.out
+####mpirun pw.x -npool 20 < 2.Co_ZnS_q0.nscf.in > 2.Co_ZnS_q0.nscf.out
 
