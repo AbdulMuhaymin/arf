@@ -20,6 +20,5 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-
-mpirun pw.x -npool 5 -i 1.Fe_in_ZnS.relax.qp1.in > 1.Fe_in_ZnS.relax.qp1.out
-###mpirun pw.x -npool 10 -i 2.Fe_in_ZnS.scf.qp1.in > 2.Fe_in_ZnS.scf.qp1.out
+###mpirun pw.x -npool 5 -i 1.Fe_in_ZnS.relax.qp1.in > 1.Fe_in_ZnS.relax.qp1.out
+mpirun pw.x -npool 5 -i 2.Fe_in_ZnS.scf.qp1.in > 2.Fe_in_ZnS.scf.qp1.out

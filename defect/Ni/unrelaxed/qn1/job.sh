@@ -20,4 +20,4 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 10 -i 1.Ni_in_ZnS.scf.qn1.in > q.Ni_in_ZnS.scf.qn1.out
+mpirun pw.x -npool 10 -i 1.Ni_in_ZnS.scf.qn1.in > 1.Ni_in_ZnS.scf.qn1.out

@@ -2,7 +2,7 @@
 #SBATCH -M arf
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
-#SBATCH -J rlxq0Fe
+#SBATCH -J unrlxq0Fe
 #SBATCH -N 5
 #SBATCH --ntasks=560
 #SBATCH --cpus-per-task=1
@@ -20,5 +20,4 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-####mpirun pw.x -npool 5 -i 1.Fe_in_ZnS.relax.q0.in > 1.Fe_in_ZnS.relax.q0.out
-mpirun pw.x -npool 5 -i 2.Fe_in_ZnS.scf.q0.in > 2.Fe_in_ZnS.scf.q0.out
+mpirun pw.x -npool 5 -i 1.Fe_in_ZnS.scf.q0.unrlxd.in > 1.Fe_in_ZnS.scf.q0.unrlxd.out
