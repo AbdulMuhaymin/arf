@@ -2,11 +2,11 @@
 #SBATCH -M arf
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
-#SBATCH -J CuVq0rlx
+#SBATCH -J FeVqn2
 #SBATCH -N 5
 #SBATCH --ntasks=560
 #SBATCH --cpus-per-task=1
-#SBATCH --time=0-10:00:00
+#SBATCH --time=1-10:00:00
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
 
@@ -20,5 +20,4 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-###mpirun pw.x -npool 5 -i 1.Cu_vac_in_ZnS.relax.q0.in > 1.Cu_vac_in_ZnS.relax.q0.out
-mpirun pw.x -npool 5 -i 2.Cu_vac_in_ZnS.scf.q0.in > 2.Cu_vac_in_ZnS.scf.q0.out
+mpirun pw.x -npool 5 -i 1.Fe_vac_in_ZnS.relax.qn2.in > 1.Fe_vac_in_ZnS.relax.qn2.out
