@@ -2,7 +2,7 @@
 #SBATCH -M arf
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
-#SBATCH -J CuVq0rlx
+#SBATCH -J CuVq0tst
 #SBATCH -N 5
 #SBATCH --ntasks=560
 #SBATCH --cpus-per-task=1
@@ -22,3 +22,5 @@ module load apps/espresso/7.2-oneapi-2023.0
 
 ###mpirun pw.x -npool 5 -i 1.Cu_vac_in_ZnS.relax.q0.in > 1.Cu_vac_in_ZnS.relax.q0.out
 mpirun pw.x -npool 5 -i 2.Cu_vac_in_ZnS.scf.q0.in > 2.Cu_vac_in_ZnS.scf.q0.out
+mpirun pw.x -npool 5 -i 3.Cu_vac_in_ZnS.bnscf_g.q0.in > 3.Cu_vac_in_ZnS.bnscf_g.q0.out
+mpirun pw.x -npool 5 -i 4.Cu_vac_in_ZnS.bnscf.q0.in > 4.Cu_vac_in_ZnS.bnscf.q0.out

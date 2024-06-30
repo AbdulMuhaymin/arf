@@ -20,4 +20,4 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 5 -i 1.Co_vac_in_ZnS.relax.q0.in > 1.Co__vac_in_ZnS.relax.q0.out
+mpirun pw.x -npool 5 -i 1.Co_vac_in_ZnS.relax.q0.in.part2 > 1.Co_vac_in_ZnS.relax.q0.out.part2
