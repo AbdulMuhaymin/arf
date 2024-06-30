@@ -20,4 +20,4 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 5 -i 1.Cu_in_ZnS.scf.q0.unrlxd.in > 2.Cu_in_ZnS.scf.q0.unrlxd.out
+mpirun pw.x -npool 5 -i 1.Cu_in_ZnS.scf.q0.unrlxd.in > 1.Cu_in_ZnS.scf.q0.unrlxd.out
