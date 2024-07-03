@@ -2,11 +2,11 @@
 #SBATCH -M arf
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
-#SBATCH -J CuVq0tst
-#SBATCH -N 5
-#SBATCH --ntasks=560
+#SBATCH -J CuVq0
+#SBATCH -N 10
+#SBATCH --ntasks=1120
 #SBATCH --cpus-per-task=1
-#SBATCH --time=0-10:00:00
+#SBATCH --time=2-10:00:00
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
 
@@ -21,6 +21,14 @@ module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
 ###mpirun pw.x -npool 5 -i 1.Cu_vac_in_ZnS.relax.q0.in > 1.Cu_vac_in_ZnS.relax.q0.out
-mpirun pw.x -npool 5 -i 2.Cu_vac_in_ZnS.scf.q0.in > 2.Cu_vac_in_ZnS.scf.q0.out
-mpirun pw.x -npool 5 -i 3.Cu_vac_in_ZnS.bnscf_g.q0.in > 3.Cu_vac_in_ZnS.bnscf_g.q0.out
-mpirun pw.x -npool 5 -i 4.Cu_vac_in_ZnS.bnscf.q0.in > 4.Cu_vac_in_ZnS.bnscf.q0.out
+mpirun pw.x -npool 10 -i 2.Cu_vac_in_ZnS.scf.q0.in > 2.Cu_vac_in_ZnS.scf.q0.out
+###mpirun pw.x -npool 5 -i 3.Cu_vac_in_ZnS.bnscf_g.q0.in > 3.Cu_vac_in_ZnS.bnscf_g.q0.out
+###mpirun pw.x -npool 5 -i 4.Cu_vac_in_ZnS.bnscf.q0.in > 4.Cu_vac_in_ZnS.bnscf.q0.out
+
+mpirun pw.x -npool 10 -i 3.Cu_vac_in_ZnS.nscf.q0.in > 3.Cu_vac_in_ZnS.nscf.q0.out
+
+mpirun -np 112 pp.x < 4.pp.in > 4.pp.out
+mpirun -np 112 dos.x < 5.dos.in > 5.dos.out
+mpirun -np 112 projwfc.x < 6.projwfc.in > 6.projwfc.out
+
+rm -rf out/*/*wfc*.hdf5
