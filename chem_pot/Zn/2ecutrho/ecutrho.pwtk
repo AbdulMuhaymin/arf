@@ -1,0 +1,23 @@
+load_fromPWI template.in
+
+input_pushpop {
+    printTitle TEST-2 "Convergence test #2: BASIS SET(ecutrho)"
+        set dat     Etot-vs-dual.dat; # name of datafile
+        set result {}
+
+    foreach ecutrho {200 250 280 300 350 400 450} {
+
+
+        
+        set name scf.$ecutrho
+
+        SYSTEM "ecutwfc = 70
+                ecutrho = $ecutrho"
+        runPW $name.in
+
+        append result "$ecutrho  [pwo_totene $name.out]\n"
+
+	print TEST-2 "Total energies written to :  $dat\n"
+    writeFile $dat $result; # results written to $dat
+    }
+}

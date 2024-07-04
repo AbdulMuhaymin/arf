@@ -1,0 +1,20 @@
+load_fromPWI template.in
+
+input_pushpop {
+    printTitle TEST-1 "Convergence test #5: Lattice parameter"
+
+    set dat     Etot-vs-alat.dat; # name of datafile
+    set result {}
+
+    foreach alat [seq 7 2 15] {
+        set name scf.$alat
+
+        SYSTEM "a = $alat "
+        runPW $name.in
+
+        # extract total energy and record it
+        append result "$alat  [pwo_totene $name.out]\n"
+    }
+    print TEST-1 "Total energies written to :  $dat\n"
+    writeFile $dat $result; # results written to $dat
+}

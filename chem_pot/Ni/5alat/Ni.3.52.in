@@ -1,0 +1,35 @@
+&CONTROL
+  calculation = 'scf'
+  outdir = 'out'
+  prefix = 'Ni'
+  pseudo_dir = '/truba/home/amuhaymin/ZnS/pseudo/QE/'
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   0.001
+  ecutwfc =   150
+  ecutrho =   800
+  ibrav = 1
+  a = 3.52
+  nat = 4
+  nosym = .false.
+  nspin = 2
+  ntyp = 1
+  occupations = 'smearing'
+  smearing = 'mp'
+  starting_magnetization(1) =   2.7777777778d-01
+/
+&ELECTRONS
+  conv_thr =   8.0000000000d-8
+  startingwfc='file'
+  startingpot='file'
+/
+ATOMIC_SPECIES
+Ni     58.6934 Ni.pbe-spn-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+Ni           0.0000000000       0.0000000000       0.0000000000 
+Ni           0.0000000000       0.5000000000       0.5000000000 
+Ni           0.5000000000       0.0000000000       0.5000000000 
+Ni           0.5000000000       0.5000000000       0.0000000000 
+K_POINTS automatic
+12 12 12 0 0 0

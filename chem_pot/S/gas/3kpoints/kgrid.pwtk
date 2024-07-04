@@ -1,0 +1,20 @@
+load_fromPWI template.in
+
+input_pushpop {
+    printTitle TEST-3 "Convergence test #3: K_POINTS"
+
+    set dat    Etot-vs-kpoint.dat; # name of datafile
+    set result {}
+
+    foreach k {1 2 3} {
+        set name scf.k-$k
+
+        K_POINTS automatic "$k $k $k 0 0 0"
+        runPW $name.in
+
+        # extract total energy and record it
+        append result "$k  [pwo_totene $name.out]\n"
+    }
+    print TEST-3 "Total energies written to :  $dat\n"
+    writeFile $dat $result; # results written to $dat
+}

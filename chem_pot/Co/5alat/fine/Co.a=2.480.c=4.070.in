@@ -1,0 +1,35 @@
+&CONTROL
+  calculation = 'scf'
+  outdir = './out/'
+  prefix = 'Co'
+  pseudo_dir      =  '/truba/home/amuhaymin/ZnS/pseudo/QE/'
+  verbosity       =  'high'
+ /
+
+&SYSTEM
+  degauss =   1d-03
+  ecutwfc =   110
+  ecutrho = 450
+  ibrav = 4
+  a = 2.480
+  c = 4.070
+  nat = 2
+  nspin =  2
+  ntyp =  1
+  occupations = 'smearing'
+  smearing = 'gauss'
+  nspin = 2
+  starting_magnetization(1) =  0.29411764706
+/
+&ELECTRONS
+   conv_thr        = 1e-6
+   startingpot     =  'file'
+   startingwfc     =  'file'
+ /
+ATOMIC_SPECIES 
+  Co    58.933   Co.pbe-spn-kjpaw_psl.0.3.1.UPF 
+ATOMIC_POSITIONS crystal
+  Co       0.333333330000   0.666666670000   0.250000000000
+  Co       0.666666670000   0.333333330000   0.750000000000
+K_POINTS automatic
+  12   12   6   0   0   0 

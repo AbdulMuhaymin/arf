@@ -1,0 +1,21 @@
+#!/bin/bash
+#SBATCH -p LocalQ
+#SBATCH -A abdul
+#SBATCH -J ZnS
+#SBATCH -N 1
+#SBATCH -n 10
+#SBATCH --time=0-1:00:00
+#SBATCH --output=slurm-%j.out
+#SBATCH --error=slurm-%j.err
+#SBATCH --mail-type=ALL
+#SBATCH --mail-user=abdulmuhaymin@alumni.bilkent.edu.tr
+
+export OMP_NUM_THREADS=1
+
+echo "SLURM_NODELIST $SLURM_NODELIST"
+echo "NUMBER OF CORES $SLURM_NTASKS"
+
+mpirun pw.x < scf.50.in > scf.50.out
+
+exit
+

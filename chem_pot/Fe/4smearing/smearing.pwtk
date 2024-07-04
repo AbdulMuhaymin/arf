@@ -1,0 +1,26 @@
+SLURM hamsi {
+load_fromPWI template.in
+
+input_pushpop {
+    printTitle TEST-4 "Convergence test #4: SMEARING & DEGAUSS"
+
+        foreach smearing { gauss m-p m-v } {
+
+            set dat $smearing.dat
+            set result {}
+    
+            foreach degauss {0.05 0.007 0.004 0.001} {
+                
+                set name scf.$smearing.degauss-$degauss
+                
+                SYSTEM " smearing = '$smearing', 
+                         degauss  = $degauss "
+                runPW $name.in
+
+                append result "$degauss [pwo_totene $name.out]\n"
+            }
+            print TEST-4 "Total energies written to :  $dat\n"
+            writeFile $dat $result
+        }
+}
+}

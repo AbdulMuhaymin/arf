@@ -1,0 +1,34 @@
+&CONTROL
+  calculation = 'scf'
+  outdir = './out/'
+  prefix = 'Fe'
+  pseudo_dir = '/truba/home/amuhaymin/ZnS/pseudo/QE/'
+  verbosity = 'high'
+/
+&SYSTEM
+  degauss =   0.001
+  ecutrho =   700
+  ecutwfc =   100
+  ibrav = 1
+  nat = 2
+  a = 2.834
+  nspin = 2
+  ntyp = 1
+  occupations = 'smearing'
+  smearing = 'gauss'
+  starting_magnetization(1) =   3.1250000000d-01
+/
+&ELECTRONS
+  conv_thr =   4.0000000000d-10
+  electron_maxstep = 80
+  mixing_beta =   4.0000000000d-01
+  startingwfc = 'file'
+  startingpot = 'file'
+/
+ATOMIC_SPECIES
+Fe     55.845 Fe.pbe-spn-kjpaw_psl.1.0.0.UPF
+ATOMIC_POSITIONS crystal
+Fe           0.0000000000       0.0000000000       0.0000000000 
+Fe           0.5000000000       0.5000000000       0.5000000000 
+K_POINTS automatic
+10 10 10 0 0 0

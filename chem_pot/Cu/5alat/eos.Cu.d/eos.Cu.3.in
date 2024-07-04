@@ -1,0 +1,42 @@
+ &CONTROL
+   calculation     =  'scf'
+   outdir          =  './out/'
+   prefix          =  'Cu'
+   pseudo_dir      =  '/home/abdul/git_repo/ZnS_Cu-Vacancy/pseudo/QE'
+   tstress         =  .false.
+   verbosity       =  'high'
+ /
+
+ &SYSTEM
+   celldm(1)       =  6.686690259576109
+   degauss         =  0.001
+   ecutrho         =  520
+   ecutwfc         =  130
+   ibrav           =  1
+   nat             =  4
+   ntyp            =  1
+   occupations     =  'smearing'
+   smearing        =  'gauss'
+ /
+
+ &ELECTRONS
+   conv_thr        =  1e-8
+   startingpot     =  'file'
+   startingwfc     =  'file'
+ /
+
+ATOMIC_SPECIES 
+  Cu    63.546   Cu.pbe-spn-kjpaw_psl.1.0.0.UPF 
+
+
+ATOMIC_POSITIONS crystal
+  Cu       0.000000000000   0.000000000000   0.000000000000
+  Cu       0.000000000000   0.500000000000   0.500000000000
+  Cu       0.500000000000   0.000000000000   0.500000000000
+  Cu       0.500000000000   0.500000000000   0.000000000000
+
+K_POINTS automatic
+  12   12   12   0   0   0 
+
+
+
