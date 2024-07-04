@@ -2,9 +2,9 @@
 #SBATCH -M arf
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
-#SBATCH -J Cuq0
-#SBATCH -N 5
-#SBATCH --ntasks=560
+#SBATCH -J Cuq0un
+#SBATCH -N 10
+#SBATCH --ntasks=1120
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0-10:00:00
 #SBATCH --output=slurm-%j.out
@@ -20,4 +20,15 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 5 -i 1.Cu_in_ZnS.scf.q0.unrlxd.in > 2.Cu_in_ZnS.scf.q0.unrlxd.out
+mpirun -np 1120 pw.x -npool 10 -i 1.Cu_in_ZnS.scf.q0.unrlxd.in > 1.Cu_in_ZnS.scf.q0.unrlxd.out
+mpirun -np 1120 pw.x -npool 10 -i 2.Cu_in_ZnS.nscf.q0.unrlxd.in > 2.Cu_in_ZnS.nscf.q0.unrlxd.out
+
+mpirun -np 112 pp.x < 4.pp.in > 4.pp.out
+mpirun -np 112 dos.x < 5.dos.in > 5.dos.out
+mpirun -np 112 projwfc.x < 6.projwfc.in > 6.projwfc.out
+
+tar -czvf 6.pdos_files.tar.gz Cu_in_ZnS.q0.unrlxd.pdos*
+tar -tzvf 6.pdos_files.tar.gz
+rm Cu_in_ZnS.q0.unrlxd.pdos*
+rm Cu_in_ZnS.q0.unrlxd.pp
+rm -rf out/*/*wfc*.hdf5
