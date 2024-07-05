@@ -20,4 +20,15 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 10 -i 1.Ni_in_ZnS.scf.qp1.in > 1.Ni_in_ZnS.scf.qp1.out
+mpirun pw.x -npool 10 -i 1.Ni_in_ZnS.scf.qp1.unrlxd.in > 1.Ni_in_ZnS.scf.qp1.unrlxd.out
+mpirun -np 1120 pw.x -npool 10 -i 2.Ni_in_ZnS.nscf.qp1.unrlxd.in > 2.Ni_in_ZnS.nscf.qp1.unrlxd.out
+
+mpirun -np 112 pp.x < 4.pp.in > 4.pp.out
+mpirun -np 112 dos.x < 5.dos.in > 5.dos.out
+mpirun -np 112 projwfc.x < 6.projwfc.in > 6.projwfc.out
+
+tar -czvf 6.pdos_files.tar.gz Ni_in_ZnS.qp1.unrlxd.pdos*
+tar -tzvf 6.pdos_files.tar.gz
+rm Ni_in_ZnS.qp1.unrlxd.pdos*
+rm Ni_in_ZnS.qp1.unrlxd.pp
+rm -rf out/*/*wfc*.hdf5
