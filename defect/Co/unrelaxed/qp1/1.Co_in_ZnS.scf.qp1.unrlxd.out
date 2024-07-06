@@ -1,0 +1,3123 @@
+
+     Program PWSCF v.7.2 starts on  6Jul2024 at 18:20:36 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI), running on  1120 processors
+
+     MPI processes distributed on    10 nodes
+     233252 MiB available memory on the printing compute node when the environment starts
+ 
+     Reading input from 1.Co_in_ZnS.scf.qp1.unrlxd.in
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+     file S.pbe-n-kjpaw_psl.1.0.0.UPF: wavefunction(s)  3S 3P renormalized
+     file Zn.pbe-dnl-kjpaw_psl.1.0.0.UPF: wavefunction(s)  4S 3D renormalized
+     file Co.pbe-spn-kjpaw_psl.0.3.1.UPF: wavefunction(s)  3P 3D renormalized
+ 
+     K-points division:     npool     =      10
+     R & G space division:  proc/nbgrp/npool/nimage =     112
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     scalapack distributed-memory algorithm (size of sub-group:  3*  3 procs)
+
+ 
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min         180     180     46                19282    19282    2562
+     Max         181     181     47                19291    19291    2573
+     Sum       20217   20217   5249              2160009  2160009  287777
+ 
+     Using Slab Decomposition
+ 
+
+
+     bravais-lattice index     =            1
+     lattice parameter (alat)  =      20.5686  a.u.
+     unit-cell volume          =    8701.8677 (a.u.)^3
+     number of atoms/cell      =           64
+     number of atomic types    =            3
+     number of electrons       =       580.00
+     number of Kohn-Sham states=          348
+     kinetic-energy cutoff     =     150.0000  Ry
+     charge density cutoff     =     600.0000  Ry
+     scf convergence threshold =      1.0E-08
+     mixing beta               =       0.7000
+     number of iterations used =            8  plain     mixing
+     Exchange-correlation= SLA  PW   PBX  PBC
+                           (   1   4   3   4   0   0   0)
+
+     celldm(1)=  20.568573  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.000000   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.000000  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.000000 )  
+
+
+     PseudoPot. # 1 for S  read from file:
+     /arf/home/amuhaymin/pseudo/S.pbe-n-kjpaw_psl.1.0.0.UPF
+     MD5 check sum: fb45dfebcf3e72a4e1bd4a866ec2e262
+     Pseudo is Projector augmented-wave + core cor, Zval =  6.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.3
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1151 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for Zn read from file:
+     /arf/home/amuhaymin/pseudo/Zn.pbe-dnl-kjpaw_psl.1.0.0.UPF
+     MD5 check sum: c608214d9520ac179f507641260889e3
+     Pseudo is Projector augmented-wave + core cor, Zval = 12.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.2.2
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1201 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 3 for Co read from file:
+     /arf/home/amuhaymin/pseudo/Co.pbe-spn-kjpaw_psl.0.3.1.UPF
+     MD5 check sum: b0a1ad65bf214e88c1f3d33b20c7d919
+     Pseudo is Projector augmented-wave + core cor, Zval = 17.0
+     Generated using &quot;atomic&quot; code by A. Dal Corso  v.6.2.2
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1193 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+        S              6.00    32.06500     S ( 1.00)
+        Zn            12.00    65.38000     Zn( 1.00)
+        Co            17.00    63.54600     Co( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+        S            0.000
+        Zn           0.000
+        Co           0.235
+
+     24 Sym. Ops. (no inversion) found
+
+
+                                    s                        frac. trans.
+
+      isym =  1     identity                                     
+
+ cryst.   s( 1) = (     1          0          0      )
+                  (     0          1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 1) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  2     180 deg rotation - cart. axis [0,0,1]        
+
+ cryst.   s( 2) = (    -1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0          1      )
+
+ cart.    s( 2) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym =  3     180 deg rotation - cart. axis [0,1,0]        
+
+ cryst.   s( 3) = (    -1          0          0      )
+                  (     0          1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 3) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  4     180 deg rotation - cart. axis [1,0,0]        
+
+ cryst.   s( 4) = (     1          0          0      )
+                  (     0         -1          0      )
+                  (     0          0         -1      )
+
+ cart.    s( 4) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym =  5     120 deg rotation - cart. axis [-1,-1,-1]     
+
+ cryst.   s( 5) = (     0          0          1      )
+                  (     1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s( 5) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym =  6     120 deg rotation - cart. axis [-1,1,1]       
+
+ cryst.   s( 6) = (     0          0         -1      )
+                  (    -1          0          0      )
+                  (     0          1          0      )
+
+ cart.    s( 6) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym =  7     120 deg rotation - cart. axis [1,1,-1]       
+
+ cryst.   s( 7) = (     0          0         -1      )
+                  (     1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s( 7) = (  0.0000000  1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym =  8     120 deg rotation - cart. axis [1,-1,1]       
+
+ cryst.   s( 8) = (     0          0          1      )
+                  (    -1          0          0      )
+                  (     0         -1          0      )
+
+ cart.    s( 8) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym =  9     120 deg rotation - cart. axis [1,1,1]        
+
+ cryst.   s( 9) = (     0          1          0      )
+                  (     0          0          1      )
+                  (     1          0          0      )
+
+ cart.    s( 9) = (  0.0000000  0.0000000  1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 10     120 deg rotation - cart. axis [-1,1,-1]      
+
+ cryst.   s(10) = (     0         -1          0      )
+                  (     0          0         -1      )
+                  (     1          0          0      )
+
+ cart.    s(10) = (  0.0000000  0.0000000  1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 11     120 deg rotation - cart. axis [1,-1,-1]      
+
+ cryst.   s(11) = (     0         -1          0      )
+                  (     0          0          1      )
+                  (    -1          0          0      )
+
+ cart.    s(11) = (  0.0000000  0.0000000 -1.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 12     120 deg rotation - cart. axis [-1,-1,1]      
+
+ cryst.   s(12) = (     0          1          0      )
+                  (     0          0         -1      )
+                  (    -1          0          0      )
+
+ cart.    s(12) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 13     inv. 180 deg rotation - cart. axis [1,1,0]   
+
+ cryst.   s(13) = (     0         -1          0      )
+                  (    -1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s(13) = (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 14     inv. 180 deg rotation - cart. axis [1,-1,0]  
+
+ cryst.   s(14) = (     0          1          0      )
+                  (     1          0          0      )
+                  (     0          0          1      )
+
+ cart.    s(14) = (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+
+
+      isym = 15     inv.  90 deg rotation - cart. axis [0,0,-1]  
+
+ cryst.   s(15) = (     0          1          0      )
+                  (    -1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s(15) = (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 16     inv.  90 deg rotation - cart. axis [0,0,1]   
+
+ cryst.   s(16) = (     0         -1          0      )
+                  (     1          0          0      )
+                  (     0          0         -1      )
+
+ cart.    s(16) = (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+
+
+      isym = 17     inv. 180 deg rotation - cart. axis [1,0,1]   
+
+ cryst.   s(17) = (     0          0         -1      )
+                  (     0          1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(17) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 18     inv. 180 deg rotation - cart. axis [-1,0,1]  
+
+ cryst.   s(18) = (     0          0          1      )
+                  (     0          1          0      )
+                  (     1          0          0      )
+
+ cart.    s(18) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 19     inv.  90 deg rotation - cart. axis [0,1,0]   
+
+ cryst.   s(19) = (     0          0          1      )
+                  (     0         -1          0      )
+                  (    -1          0          0      )
+
+ cart.    s(19) = (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  (  1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 20     inv.  90 deg rotation - cart. axis [0,-1,0]  
+
+ cryst.   s(20) = (     0          0         -1      )
+                  (     0         -1          0      )
+                  (     1          0          0      )
+
+ cart.    s(20) = (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+                  ( -1.0000000  0.0000000  0.0000000 )
+
+
+      isym = 21     inv. 180 deg rotation - cart. axis [0,1,1]   
+
+ cryst.   s(21) = (     1          0          0      )
+                  (     0          0         -1      )
+                  (     0         -1          0      )
+
+ cart.    s(21) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+      isym = 22     inv. 180 deg rotation - cart. axis [0,1,-1]  
+
+ cryst.   s(22) = (     1          0          0      )
+                  (     0          0          1      )
+                  (     0          1          0      )
+
+ cart.    s(22) = (  1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 23     inv.  90 deg rotation - cart. axis [-1,0,0]  
+
+ cryst.   s(23) = (    -1          0          0      )
+                  (     0          0          1      )
+                  (     0         -1          0      )
+
+ cart.    s(23) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000 -1.0000000 )
+                  (  0.0000000  1.0000000  0.0000000 )
+
+
+      isym = 24     inv.  90 deg rotation - cart. axis [1,0,0]   
+
+ cryst.   s(24) = (    -1          0          0      )
+                  (     0          0         -1      )
+                  (     0          1          0      )
+
+ cart.    s(24) = ( -1.0000000  0.0000000  0.0000000 )
+                  (  0.0000000  0.0000000  1.0000000 )
+                  (  0.0000000 -1.0000000  0.0000000 )
+
+
+     point group T_d (-43m) 
+     there are  5 classes
+     the character table:
+
+       E     8C3   3C2   6S4   6s_d 
+A_1    1.00  1.00  1.00  1.00  1.00
+A_2    1.00  1.00  1.00 -1.00 -1.00
+E      2.00 -1.00  2.00  0.00  0.00
+T_1    3.00  0.00 -1.00  1.00 -1.00
+T_2    3.00  0.00 -1.00 -1.00  1.00
+
+     the symmetry operations in each class and the name of the first element:
+
+     E        1
+          identity                                               
+     8C3      5    7    8    6   12    9   10   11
+          120 deg rotation - cart. axis [-1,-1,-1]               
+     3C2      2    3    4
+          180 deg rotation - cart. axis [0,0,1]                  
+     6S4     15   16   20   19   23   24
+          inv.  90 deg rotation - cart. axis [0,0,-1]            
+     6s_d    13   14   17   18   21   22
+          inv. 180 deg rotation - cart. axis [1,1,0]             
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1           Zn  tau(   1) = (   0.0000000   0.0000000   0.0000000  )
+         2           Zn  tau(   2) = (   0.0000000   0.2500000   0.2500000  )
+         3           Zn  tau(   3) = (   0.2500000   0.0000000   0.2500000  )
+         4           Zn  tau(   4) = (   0.2500000   0.2500000   0.0000000  )
+         5           S   tau(   5) = (   0.1250000   0.3750000   0.3750000  )
+         6           S   tau(   6) = (   0.1250000   0.1250000   0.1250000  )
+         7           S   tau(   7) = (   0.3750000   0.3750000   0.1250000  )
+         8           S   tau(   8) = (   0.3750000   0.1250000   0.3750000  )
+         9           Zn  tau(   9) = (   0.0000000   0.0000000   0.5000000  )
+        10           Zn  tau(  10) = (   0.0000000   0.2500000   0.7500000  )
+        11           Zn  tau(  11) = (   0.2500000   0.0000000   0.7500000  )
+        12           Zn  tau(  12) = (   0.2500000   0.2500000   0.5000000  )
+        13           S   tau(  13) = (   0.1250000   0.3750000   0.8750000  )
+        14           S   tau(  14) = (   0.1250000   0.1250000   0.6250000  )
+        15           S   tau(  15) = (   0.3750000   0.3750000   0.6250000  )
+        16           S   tau(  16) = (   0.3750000   0.1250000   0.8750000  )
+        17           Zn  tau(  17) = (   0.0000000   0.5000000   0.0000000  )
+        18           Zn  tau(  18) = (   0.0000000   0.7500000   0.2500000  )
+        19           Zn  tau(  19) = (   0.2500000   0.5000000   0.2500000  )
+        20           Zn  tau(  20) = (   0.2500000   0.7500000   0.0000000  )
+        21           S   tau(  21) = (   0.1250000   0.8750000   0.3750000  )
+        22           S   tau(  22) = (   0.1250000   0.6250000   0.1250000  )
+        23           S   tau(  23) = (   0.3750000   0.8750000   0.1250000  )
+        24           S   tau(  24) = (   0.3750000   0.6250000   0.3750000  )
+        25           Zn  tau(  25) = (   0.0000000   0.5000000   0.5000000  )
+        26           Zn  tau(  26) = (   0.0000000   0.7500000   0.7500000  )
+        27           Zn  tau(  27) = (   0.2500000   0.5000000   0.7500000  )
+        28           Zn  tau(  28) = (   0.2500000   0.7500000   0.5000000  )
+        29           S   tau(  29) = (   0.1250000   0.8750000   0.8750000  )
+        30           S   tau(  30) = (   0.1250000   0.6250000   0.6250000  )
+        31           S   tau(  31) = (   0.3750000   0.8750000   0.6250000  )
+        32           S   tau(  32) = (   0.3750000   0.6250000   0.8750000  )
+        33           Zn  tau(  33) = (   0.5000000   0.0000000   0.0000000  )
+        34           Zn  tau(  34) = (   0.5000000   0.2500000   0.2500000  )
+        35           Zn  tau(  35) = (   0.7500000   0.0000000   0.2500000  )
+        36           Zn  tau(  36) = (   0.7500000   0.2500000   0.0000000  )
+        37           S   tau(  37) = (   0.6250000   0.3750000   0.3750000  )
+        38           S   tau(  38) = (   0.6250000   0.1250000   0.1250000  )
+        39           S   tau(  39) = (   0.8750000   0.3750000   0.1250000  )
+        40           S   tau(  40) = (   0.8750000   0.1250000   0.3750000  )
+        41           Zn  tau(  41) = (   0.5000000   0.0000000   0.5000000  )
+        42           Zn  tau(  42) = (   0.5000000   0.2500000   0.7500000  )
+        43           Zn  tau(  43) = (   0.7500000   0.0000000   0.7500000  )
+        44           Zn  tau(  44) = (   0.7500000   0.2500000   0.5000000  )
+        45           S   tau(  45) = (   0.6250000   0.3750000   0.8750000  )
+        46           S   tau(  46) = (   0.6250000   0.1250000   0.6250000  )
+        47           S   tau(  47) = (   0.8750000   0.3750000   0.6250000  )
+        48           S   tau(  48) = (   0.8750000   0.1250000   0.8750000  )
+        49           Zn  tau(  49) = (   0.5000000   0.5000000   0.0000000  )
+        50           Zn  tau(  50) = (   0.5000000   0.7500000   0.2500000  )
+        51           Zn  tau(  51) = (   0.7500000   0.5000000   0.2500000  )
+        52           Zn  tau(  52) = (   0.7500000   0.7500000   0.0000000  )
+        53           S   tau(  53) = (   0.6250000   0.8750000   0.3750000  )
+        54           S   tau(  54) = (   0.6250000   0.6250000   0.1250000  )
+        55           S   tau(  55) = (   0.8750000   0.8750000   0.1250000  )
+        56           S   tau(  56) = (   0.8750000   0.6250000   0.3750000  )
+        57           Co  tau(  57) = (   0.5000000   0.5000000   0.5000000  )
+        58           Zn  tau(  58) = (   0.5000000   0.7500000   0.7500000  )
+        59           Zn  tau(  59) = (   0.7500000   0.5000000   0.7500000  )
+        60           Zn  tau(  60) = (   0.7500000   0.7500000   0.5000000  )
+        61           S   tau(  61) = (   0.6250000   0.8750000   0.8750000  )
+        62           S   tau(  62) = (   0.6250000   0.6250000   0.6250000  )
+        63           S   tau(  63) = (   0.8750000   0.8750000   0.6250000  )
+        64           S   tau(  64) = (   0.8750000   0.6250000   0.8750000  )
+
+   Crystallographic axes
+
+     site n.     atom                  positions (cryst. coord.)
+         1           Zn  tau(   1) = (  0.0000000  0.0000000  0.0000000  )
+         2           Zn  tau(   2) = (  0.0000000  0.2500000  0.2500000  )
+         3           Zn  tau(   3) = (  0.2500000  0.0000000  0.2500000  )
+         4           Zn  tau(   4) = (  0.2500000  0.2500000  0.0000000  )
+         5           S   tau(   5) = (  0.1250000  0.3750000  0.3750000  )
+         6           S   tau(   6) = (  0.1250000  0.1250000  0.1250000  )
+         7           S   tau(   7) = (  0.3750000  0.3750000  0.1250000  )
+         8           S   tau(   8) = (  0.3750000  0.1250000  0.3750000  )
+         9           Zn  tau(   9) = (  0.0000000  0.0000000  0.5000000  )
+        10           Zn  tau(  10) = (  0.0000000  0.2500000  0.7500000  )
+        11           Zn  tau(  11) = (  0.2500000  0.0000000  0.7500000  )
+        12           Zn  tau(  12) = (  0.2500000  0.2500000  0.5000000  )
+        13           S   tau(  13) = (  0.1250000  0.3750000  0.8750000  )
+        14           S   tau(  14) = (  0.1250000  0.1250000  0.6250000  )
+        15           S   tau(  15) = (  0.3750000  0.3750000  0.6250000  )
+        16           S   tau(  16) = (  0.3750000  0.1250000  0.8750000  )
+        17           Zn  tau(  17) = (  0.0000000  0.5000000  0.0000000  )
+        18           Zn  tau(  18) = (  0.0000000  0.7500000  0.2500000  )
+        19           Zn  tau(  19) = (  0.2500000  0.5000000  0.2500000  )
+        20           Zn  tau(  20) = (  0.2500000  0.7500000  0.0000000  )
+        21           S   tau(  21) = (  0.1250000  0.8750000  0.3750000  )
+        22           S   tau(  22) = (  0.1250000  0.6250000  0.1250000  )
+        23           S   tau(  23) = (  0.3750000  0.8750000  0.1250000  )
+        24           S   tau(  24) = (  0.3750000  0.6250000  0.3750000  )
+        25           Zn  tau(  25) = (  0.0000000  0.5000000  0.5000000  )
+        26           Zn  tau(  26) = (  0.0000000  0.7500000  0.7500000  )
+        27           Zn  tau(  27) = (  0.2500000  0.5000000  0.7500000  )
+        28           Zn  tau(  28) = (  0.2500000  0.7500000  0.5000000  )
+        29           S   tau(  29) = (  0.1250000  0.8750000  0.8750000  )
+        30           S   tau(  30) = (  0.1250000  0.6250000  0.6250000  )
+        31           S   tau(  31) = (  0.3750000  0.8750000  0.6250000  )
+        32           S   tau(  32) = (  0.3750000  0.6250000  0.8750000  )
+        33           Zn  tau(  33) = (  0.5000000  0.0000000  0.0000000  )
+        34           Zn  tau(  34) = (  0.5000000  0.2500000  0.2500000  )
+        35           Zn  tau(  35) = (  0.7500000  0.0000000  0.2500000  )
+        36           Zn  tau(  36) = (  0.7500000  0.2500000  0.0000000  )
+        37           S   tau(  37) = (  0.6250000  0.3750000  0.3750000  )
+        38           S   tau(  38) = (  0.6250000  0.1250000  0.1250000  )
+        39           S   tau(  39) = (  0.8750000  0.3750000  0.1250000  )
+        40           S   tau(  40) = (  0.8750000  0.1250000  0.3750000  )
+        41           Zn  tau(  41) = (  0.5000000  0.0000000  0.5000000  )
+        42           Zn  tau(  42) = (  0.5000000  0.2500000  0.7500000  )
+        43           Zn  tau(  43) = (  0.7500000  0.0000000  0.7500000  )
+        44           Zn  tau(  44) = (  0.7500000  0.2500000  0.5000000  )
+        45           S   tau(  45) = (  0.6250000  0.3750000  0.8750000  )
+        46           S   tau(  46) = (  0.6250000  0.1250000  0.6250000  )
+        47           S   tau(  47) = (  0.8750000  0.3750000  0.6250000  )
+        48           S   tau(  48) = (  0.8750000  0.1250000  0.8750000  )
+        49           Zn  tau(  49) = (  0.5000000  0.5000000  0.0000000  )
+        50           Zn  tau(  50) = (  0.5000000  0.7500000  0.2500000  )
+        51           Zn  tau(  51) = (  0.7500000  0.5000000  0.2500000  )
+        52           Zn  tau(  52) = (  0.7500000  0.7500000  0.0000000  )
+        53           S   tau(  53) = (  0.6250000  0.8750000  0.3750000  )
+        54           S   tau(  54) = (  0.6250000  0.6250000  0.1250000  )
+        55           S   tau(  55) = (  0.8750000  0.8750000  0.1250000  )
+        56           S   tau(  56) = (  0.8750000  0.6250000  0.3750000  )
+        57           Co  tau(  57) = (  0.5000000  0.5000000  0.5000000  )
+        58           Zn  tau(  58) = (  0.5000000  0.7500000  0.7500000  )
+        59           Zn  tau(  59) = (  0.7500000  0.5000000  0.7500000  )
+        60           Zn  tau(  60) = (  0.7500000  0.7500000  0.5000000  )
+        61           S   tau(  61) = (  0.6250000  0.8750000  0.8750000  )
+        62           S   tau(  62) = (  0.6250000  0.6250000  0.6250000  )
+        63           S   tau(  63) = (  0.8750000  0.8750000  0.6250000  )
+        64           S   tau(  64) = (  0.8750000  0.6250000  0.8750000  )
+
+     number of k points=    10  Gaussian smearing, width (Ry)=  0.0010
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0156250
+        k(    2) = (   0.0000000   0.0000000   0.2500000), wk =   0.0937500
+        k(    3) = (   0.0000000   0.0000000  -0.5000000), wk =   0.0468750
+        k(    4) = (   0.0000000   0.2500000   0.2500000), wk =   0.1875000
+        k(    5) = (   0.0000000   0.2500000  -0.5000000), wk =   0.1875000
+        k(    6) = (   0.0000000  -0.5000000  -0.5000000), wk =   0.0468750
+        k(    7) = (   0.2500000   0.2500000   0.2500000), wk =   0.1250000
+        k(    8) = (   0.2500000   0.2500000  -0.5000000), wk =   0.1875000
+        k(    9) = (   0.2500000  -0.5000000  -0.5000000), wk =   0.0937500
+        k(   10) = (  -0.5000000  -0.5000000  -0.5000000), wk =   0.0156250
+
+                       cryst. coord.
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0156250
+        k(    2) = (   0.0000000   0.0000000   0.2500000), wk =   0.0937500
+        k(    3) = (   0.0000000   0.0000000  -0.5000000), wk =   0.0468750
+        k(    4) = (   0.0000000   0.2500000   0.2500000), wk =   0.1875000
+        k(    5) = (   0.0000000   0.2500000  -0.5000000), wk =   0.1875000
+        k(    6) = (   0.0000000  -0.5000000  -0.5000000), wk =   0.0468750
+        k(    7) = (   0.2500000   0.2500000   0.2500000), wk =   0.1250000
+        k(    8) = (   0.2500000   0.2500000  -0.5000000), wk =   0.1875000
+        k(    9) = (   0.2500000  -0.5000000  -0.5000000), wk =   0.0937500
+        k(   10) = (  -0.5000000  -0.5000000  -0.5000000), wk =   0.0156250
+
+     Dense  grid:  2160009 G-vectors     FFT dimensions: ( 162, 162, 162)
+
+     Dynamical RAM for                 wfc:      12.80 MB
+
+     Dynamical RAM for     wfc (w. buffer):      38.39 MB
+
+     Dynamical RAM for           str. fact:       0.88 MB
+
+     Dynamical RAM for           local pot:       0.00 MB
+
+     Dynamical RAM for          nlocal pot:      42.36 MB
+
+     Dynamical RAM for                qrad:       5.90 MB
+
+     Dynamical RAM for          rho,v,vnew:       4.17 MB
+
+     Dynamical RAM for               rhoin:       1.39 MB
+
+     Dynamical RAM for            rho*nmix:       9.42 MB
+
+     Dynamical RAM for           G-vectors:       1.25 MB
+
+     Dynamical RAM for          h,s,v(r/c):       2.46 MB
+
+     Dynamical RAM for          <psi|beta>:       6.12 MB
+
+     Dynamical RAM for                 psi:      25.59 MB
+
+     Dynamical RAM for                hpsi:      25.59 MB
+
+     Dynamical RAM for                spsi:      25.59 MB
+
+     Dynamical RAM for      wfcinit/wfcrot:      34.65 MB
+
+     Dynamical RAM for           addusdens:       6.97 MB
+
+     Estimated static dynamical RAM per process >      97.92 MB
+
+     Estimated max dynamical RAM per process >     192.70 MB
+
+     Estimated total dynamical RAM >     201.50 GB
+
+     Check: negative core charge=   -0.000001
+     Generating pointlists ...
+     new r_m :   0.0893 (alat units)  1.8370 (a.u.) for type    1
+     new r_m :   0.0893 (alat units)  1.8370 (a.u.) for type    2
+     new r_m :   0.0893 (alat units)  1.8370 (a.u.) for type    3
+
+     Initial potential from superposition of free atoms
+
+     starting charge     580.8832, renormalised to     580.0000
+     Starting wfcs are  417 randomized atomic wfcs
+     Checking if some PAW data can be deallocated... 
+       PAW data deallocated on  560 nodes for type:  1
+       PAW data deallocated on  577 nodes for type:  2
+       PAW data deallocated on 1103 nodes for type:  3
+
+     total cpu time spent up to now is        6.3 secs
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1231 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        207755 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.00E-02,  avg # of iterations =  4.4
+
+     Threshold (ethr) on eigenvalues was too large:
+     Diagonalizing with lowered threshold
+
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1387 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        207177 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.95E-04,  avg # of iterations =  4.3
+
+     total cpu time spent up to now is       24.6 secs
+
+     total energy              =  -10056.90987249 Ry
+     estimated scf accuracy    <       2.17067924 Ry
+
+     total magnetization       =     4.00 Bohr mag/cell
+     absolute magnetization    =     4.01 Bohr mag/cell
+
+     iteration #  2     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1412 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        207149 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.74E-04,  avg # of iterations =  3.0
+
+     total cpu time spent up to now is       35.9 secs
+
+     total energy              =  -10055.84609323 Ry
+     estimated scf accuracy    <      11.31936775 Ry
+
+     total magnetization       =     0.18 Bohr mag/cell
+     absolute magnetization    =     0.50 Bohr mag/cell
+
+     iteration #  3     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1433 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        206845 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.74E-04,  avg # of iterations = 10.7
+
+     total cpu time spent up to now is       46.9 secs
+
+     total energy              =  -10055.88491888 Ry
+     estimated scf accuracy    <      20.01694009 Ry
+
+     total magnetization       =     3.65 Bohr mag/cell
+     absolute magnetization    =     3.69 Bohr mag/cell
+
+     iteration #  4     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1447 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        206682 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.74E-04,  avg # of iterations =  5.7
+
+     total cpu time spent up to now is       56.3 secs
+
+     total energy              =  -10057.56922825 Ry
+     estimated scf accuracy    <       2.68751249 Ry
+
+     total magnetization       =     2.08 Bohr mag/cell
+     absolute magnetization    =     2.22 Bohr mag/cell
+
+     iteration #  5     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1455 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        206494 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.74E-04,  avg # of iterations =  2.0
+
+     total cpu time spent up to now is       63.6 secs
+
+     total energy              =  -10057.60822765 Ry
+     estimated scf accuracy    <       0.64774489 Ry
+
+     total magnetization       =     2.32 Bohr mag/cell
+     absolute magnetization    =     2.79 Bohr mag/cell
+
+     iteration #  6     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1462 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        206272 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.12E-04,  avg # of iterations =  4.0
+
+     total cpu time spent up to now is       71.6 secs
+
+     total energy              =  -10057.67369260 Ry
+     estimated scf accuracy    <       0.41222526 Ry
+
+     total magnetization       =     4.00 Bohr mag/cell
+     absolute magnetization    =     4.00 Bohr mag/cell
+
+     iteration #  7     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1468 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        206103 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  7.11E-05,  avg # of iterations =  1.9
+
+     total cpu time spent up to now is       79.2 secs
+
+     total energy              =  -10057.66359748 Ry
+     estimated scf accuracy    <       0.16996235 Ry
+
+     total magnetization       =     3.91 Bohr mag/cell
+     absolute magnetization    =     3.91 Bohr mag/cell
+
+     iteration #  8     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1474 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205944 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.93E-05,  avg # of iterations =  9.6
+
+     total cpu time spent up to now is       91.0 secs
+
+     total energy              =  -10057.68975506 Ry
+     estimated scf accuracy    <       0.22481183 Ry
+
+     total magnetization       =     2.61 Bohr mag/cell
+     absolute magnetization    =     2.95 Bohr mag/cell
+
+     iteration #  9     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1484 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205734 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.93E-05,  avg # of iterations =  1.8
+
+     total cpu time spent up to now is       98.4 secs
+
+     total energy              =  -10057.68575520 Ry
+     estimated scf accuracy    <       0.21428413 Ry
+
+     total magnetization       =     2.56 Bohr mag/cell
+     absolute magnetization    =     2.96 Bohr mag/cell
+
+     iteration # 10     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1489 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205505 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.93E-05,  avg # of iterations =  1.1
+
+     total cpu time spent up to now is      105.4 secs
+
+     total energy              =  -10057.68014329 Ry
+     estimated scf accuracy    <       0.12344315 Ry
+
+     total magnetization       =     2.63 Bohr mag/cell
+     absolute magnetization    =     3.01 Bohr mag/cell
+
+     iteration # 11     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1494 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205334 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.13E-05,  avg # of iterations =  1.9
+
+     total cpu time spent up to now is      112.7 secs
+
+     total energy              =  -10057.68282975 Ry
+     estimated scf accuracy    <       0.00228242 Ry
+
+     total magnetization       =     2.98 Bohr mag/cell
+     absolute magnetization    =     3.26 Bohr mag/cell
+
+     iteration # 12     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1497 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205342 MiB available memory on the node where the printing process lives
+------------------
+     c_bands:  3 eigenvalues not converged
+     ethr =  3.94E-07,  avg # of iterations = 17.3
+
+     total cpu time spent up to now is      126.4 secs
+
+     total energy              =  -10057.68268547 Ry
+     estimated scf accuracy    <       0.01985867 Ry
+
+     total magnetization       =     3.28 Bohr mag/cell
+     absolute magnetization    =     3.46 Bohr mag/cell
+
+     iteration # 13     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1508 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205281 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.94E-07,  avg # of iterations =  4.5
+
+     total cpu time spent up to now is      134.8 secs
+
+     total energy              =  -10057.68357732 Ry
+     estimated scf accuracy    <       0.00914078 Ry
+
+     total magnetization       =     2.85 Bohr mag/cell
+     absolute magnetization    =     3.19 Bohr mag/cell
+
+     iteration # 14     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1512 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205304 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.94E-07,  avg # of iterations =  1.0
+
+     total cpu time spent up to now is      141.3 secs
+
+     total energy              =  -10057.68352188 Ry
+     estimated scf accuracy    <       0.00457766 Ry
+
+     total magnetization       =     2.89 Bohr mag/cell
+     absolute magnetization    =     3.22 Bohr mag/cell
+
+     iteration # 15     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1514 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205284 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  3.94E-07,  avg # of iterations =  1.0
+
+     total cpu time spent up to now is      148.0 secs
+
+     total energy              =  -10057.68354165 Ry
+     estimated scf accuracy    <       0.00071726 Ry
+
+     total magnetization       =     2.96 Bohr mag/cell
+     absolute magnetization    =     3.26 Bohr mag/cell
+
+     iteration # 16     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1516 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205279 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.24E-07,  avg # of iterations =  1.7
+
+     total cpu time spent up to now is      155.5 secs
+
+     total energy              =  -10057.68354718 Ry
+     estimated scf accuracy    <       0.00005883 Ry
+
+     total magnetization       =     2.99 Bohr mag/cell
+     absolute magnetization    =     3.28 Bohr mag/cell
+
+     iteration # 17     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1519 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205269 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.01E-08,  avg # of iterations =  5.3
+
+     total cpu time spent up to now is      164.1 secs
+
+     total energy              =  -10057.68355201 Ry
+     estimated scf accuracy    <       0.00011967 Ry
+
+     total magnetization       =     3.03 Bohr mag/cell
+     absolute magnetization    =     3.30 Bohr mag/cell
+
+     iteration # 18     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1523 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205266 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.01E-08,  avg # of iterations =  1.2
+
+     total cpu time spent up to now is      171.4 secs
+
+     total energy              =  -10057.68355228 Ry
+     estimated scf accuracy    <       0.00001664 Ry
+
+     total magnetization       =     3.01 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     iteration # 19     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1525 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205255 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  2.87E-09,  avg # of iterations =  2.9
+
+     total cpu time spent up to now is      179.7 secs
+
+     total energy              =  -10057.68355280 Ry
+     estimated scf accuracy    <       0.00000083 Ry
+
+     total magnetization       =     3.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     iteration # 20     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1528 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205272 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.43E-10,  avg # of iterations =  6.3
+
+     total cpu time spent up to now is      188.7 secs
+
+     total energy              =  -10057.68355291 Ry
+     estimated scf accuracy    <       0.00000069 Ry
+
+     total magnetization       =     3.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     iteration # 21     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1532 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205244 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.20E-10,  avg # of iterations =  1.4
+
+     total cpu time spent up to now is      196.0 secs
+
+     total energy              =  -10057.68355293 Ry
+     estimated scf accuracy    <       0.00000008 Ry
+
+     total magnetization       =     3.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     iteration # 22     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1535 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205244 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.29E-11,  avg # of iterations =  4.0
+
+     total cpu time spent up to now is      204.2 secs
+
+     total energy              =  -10057.68355293 Ry
+     estimated scf accuracy    <       0.00000005 Ry
+
+     total magnetization       =     3.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     iteration # 23     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1538 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205238 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  7.94E-12,  avg # of iterations =  3.0
+
+     total cpu time spent up to now is      212.3 secs
+
+     total energy              =  -10057.68355293 Ry
+     estimated scf accuracy    <       0.00000001 Ry
+
+     total magnetization       =     3.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     iteration # 24     ecut=   150.00 Ry     beta= 0.70
+     Davidson diagonalization with overlap
+
+---- Real-time Memory Report at c_bands before calling an iterative solver
+          1540 MiB given to the printing process from OS
+             0 MiB allocation reported by mallinfo(arena+hblkhd)
+        205219 MiB available memory on the node where the printing process lives
+------------------
+     ethr =  1.80E-12,  avg # of iterations =  4.3
+ 
+     Magnetic moment per site  (integrated on atomic sphere of radius R)
+     atom   1 (R=0.089)  charge= 10.1558  magn= -0.0016
+     atom   2 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom   3 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom   4 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom   5 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom   6 (R=0.089)  charge=  3.9858  magn= -0.0065
+     atom   7 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom   8 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom   9 (R=0.089)  charge= 10.1551  magn=  0.0010
+     atom  10 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  11 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  12 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  13 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  14 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  15 (R=0.089)  charge=  3.9754  magn=  0.0786
+     atom  16 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  17 (R=0.089)  charge= 10.1551  magn=  0.0010
+     atom  18 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  19 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  20 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  21 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  22 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  23 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  24 (R=0.089)  charge=  3.9754  magn=  0.0786
+     atom  25 (R=0.089)  charge= 10.1559  magn= -0.0007
+     atom  26 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  27 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  28 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  29 (R=0.089)  charge=  3.9858  magn= -0.0065
+     atom  30 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  31 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  32 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  33 (R=0.089)  charge= 10.1551  magn=  0.0010
+     atom  34 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  35 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  36 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  37 (R=0.089)  charge=  3.9754  magn=  0.0786
+     atom  38 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  39 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  40 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  41 (R=0.089)  charge= 10.1559  magn= -0.0007
+     atom  42 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  43 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  44 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  45 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  46 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  47 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  48 (R=0.089)  charge=  3.9858  magn= -0.0065
+     atom  49 (R=0.089)  charge= 10.1559  magn= -0.0007
+     atom  50 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  51 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  52 (R=0.089)  charge= 10.1553  magn= -0.0008
+     atom  53 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  54 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  55 (R=0.089)  charge=  3.9858  magn= -0.0065
+     atom  56 (R=0.089)  charge=  3.9854  magn= -0.0029
+     atom  57 (R=0.089)  charge= 15.0671  magn=  2.3363
+     atom  58 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  59 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  60 (R=0.089)  charge= 10.1550  magn=  0.0035
+     atom  61 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  62 (R=0.089)  charge=  3.9754  magn=  0.0786
+     atom  63 (R=0.089)  charge=  3.9846  magn=  0.0018
+     atom  64 (R=0.089)  charge=  3.9846  magn=  0.0018
+
+     total cpu time spent up to now is      220.8 secs
+
+     End of self-consistent calculation
+
+ ------ SPIN UP ------------
+
+
+          k = 0.0000 0.0000 0.0000 (269825 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.4512  -6.9423  -6.9275  -6.9275
+    -6.9275  -6.8932  -6.8932  -6.6586  -6.6586  -6.6586  -6.6113  -6.5715
+    -6.5715  -6.5715  -6.5713  -6.5713  -6.5713  -6.5710  -6.5710  -6.5404
+    -6.5404  -6.5404  -6.5387  -6.2921  -6.2921  -6.2921  -6.2434  -6.2434
+    -6.2434  -6.2329  -6.2329  -6.2329  -0.6970  -0.6970  -0.6941  -0.6849
+    -0.6849  -0.6849  -0.6675  -0.6555  -0.6555  -0.6509  -0.6509  -0.6509
+    -0.5709  -0.5709  -0.5709  -0.5589  -0.5589  -0.5589  -0.5502  -0.5502
+    -0.5403  -0.5403  -0.5403  -0.5333  -0.5333  -0.5333  -0.5329  -0.5292
+    -0.5261  -0.5261  -0.5261  -0.5225  -0.5225  -0.5225  -0.5214  -0.5214
+    -0.5202  -0.5202  -0.5202  -0.5142  -0.5142  -0.5131  -0.5131  -0.5131
+    -0.5049  -0.5049  -0.5049  -0.4971  -0.4940  -0.4940  -0.4929  -0.4929
+    -0.4929  -0.4897  -0.4897  -0.4897  -0.4845  -0.4845  -0.4845  -0.4387
+    -0.4387  -0.4387  -0.3911  -0.3911  -0.3911  -0.3825  -0.3825  -0.3825
+    -0.3697  -0.3697  -0.3697  -0.3669  -0.3669  -0.3669  -0.3633  -0.3633
+    -0.3532  -0.3346  -0.3346  -0.3346  -0.3237  -0.3237  -0.3237  -0.2538
+    -0.2538  -0.2538  -0.2445  -0.2445  -0.2445  -0.2364  -0.2364  -0.2246
+    -0.2153  -0.2153  -0.2153  -0.2134  -0.2134  -0.2090  -0.2036  -0.2036
+    -0.2036  -0.2022  -0.1877  -0.1877  -0.1877  -0.1861  -0.1861  -0.1753
+    -0.1753  -0.1753  -0.1753  -0.1726  -0.1726  -0.1726  -0.1668  -0.1668
+    -0.1489  -0.1489  -0.1476  -0.1476  -0.1476  -0.1411  -0.1365  -0.1365
+    -0.1365  -0.1283  -0.1283  -0.1211  -0.1211  -0.1211  -0.1067  -0.1067
+    -0.1067  -0.1050  -0.1050  -0.1050  -0.1032  -0.1002  -0.1002  -0.0937
+    -0.0881  -0.0881  -0.0225  -0.0225  -0.0225   0.0201   0.0371   0.0371
+     0.0371   0.1709   0.1709   0.1709   0.2076   0.2076   0.2076   0.4085
+     0.4085   0.4085   0.4550   1.0151   1.0151   1.0699   1.0699   1.0699
+     1.1043   1.1043   1.1147   1.2169   1.4267   1.4267   1.4267   1.6852
+     1.6852   1.6852   1.6871   1.6871   1.6871   1.6948   1.6948   1.8339
+     2.2369   2.2369   2.2369   2.5914   2.5914   2.9103   2.9103   2.9103
+     2.9281   2.9281   2.9281   2.9486   2.9504   2.9504   2.9504   3.0097
+     3.0097   3.0784   3.1023   3.1023   3.1023   3.1101   3.1101   3.1407
+     3.1407   3.1407   3.1427   3.1427   3.1427   3.1975   3.2960   3.2960
+     3.2960   3.4112   3.4112   3.4112   3.5109   3.5109   3.5109   3.7455
+     3.7455   4.3630   4.3630   4.3630   4.3695   4.3695   4.3695   4.3799
+     4.3799   4.3799   4.4711   4.4711   4.4711   4.6616   4.6616   4.6616
+     4.6979   4.6979   4.6979   4.7009   4.7288   4.7288   4.7324   4.7324
+     4.7324   4.7353   4.7353   4.7353   4.8052   4.8052   4.9312   4.9312
+     4.9312   5.6084   5.6084   5.6084   7.6068   8.8366   8.8366   8.8366
+     8.9246   9.0555   9.0555   9.0555   9.6593   9.6593   9.6876   9.9998
+     9.9998   9.9998  10.0188  10.0188  10.0349  10.1450  10.1450  10.1662
+    10.1662  10.1662  10.1950  10.3302  10.3302  10.3302  10.3312  10.3312
+    10.3312  10.3513  10.3513  10.3588  10.3588  10.3588  10.7312  11.2775
+    11.2775  11.2775  11.3016  11.3016  11.3016  11.4824  11.4824  11.4824
+    11.4999  11.4999  11.7878  11.9751  11.9751  11.9752  12.2148  12.2148
+    12.2148  12.2213  12.2216  12.2231
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.0000 0.2500 (269876 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.4136  -7.1307  -6.9067  -6.9067
+    -6.9049  -6.8690  -6.7416  -6.7230  -6.7230  -6.6953  -6.6938  -6.6067
+    -6.6067  -6.6004  -6.5845  -6.5513  -6.5503  -6.5503  -6.5471  -6.4650
+    -6.4603  -6.4603  -6.4461  -6.3294  -6.2989  -6.2989  -6.2689  -6.2683
+    -6.2569  -6.2569  -6.2350  -6.2350  -0.6907  -0.6805  -0.6802  -0.6774
+    -0.6688  -0.6688  -0.6653  -0.6552  -0.6419  -0.6419  -0.6417  -0.6355
+    -0.5818  -0.5818  -0.5763  -0.5668  -0.5668  -0.5605  -0.5549  -0.5527
+    -0.5527  -0.5497  -0.5483  -0.5460  -0.5430  -0.5430  -0.5393  -0.5361
+    -0.5335  -0.5335  -0.5316  -0.5312  -0.5289  -0.5270  -0.5259  -0.5259
+    -0.5222  -0.5219  -0.5188  -0.5188  -0.5180  -0.5162  -0.5162  -0.5126
+    -0.5090  -0.5086  -0.5086  -0.5063  -0.5040  -0.4995  -0.4974  -0.4974
+    -0.4932  -0.4789  -0.4789  -0.4749  -0.4732  -0.4691  -0.4691  -0.4676
+    -0.4580  -0.4530  -0.4530  -0.4248  -0.4248  -0.4151  -0.4040  -0.3983
+    -0.3983  -0.3601  -0.3589  -0.3589  -0.3418  -0.3409  -0.3409  -0.3350
+    -0.3350  -0.3324  -0.3208  -0.2884  -0.2884  -0.2822  -0.2759  -0.2650
+    -0.2621  -0.2452  -0.2452  -0.2367  -0.2280  -0.2280  -0.2261  -0.2221
+    -0.2156  -0.2156  -0.2146  -0.2100  -0.2013  -0.2013  -0.2012  -0.1985
+    -0.1980  -0.1895  -0.1854  -0.1848  -0.1848  -0.1811  -0.1776  -0.1759
+    -0.1759  -0.1729  -0.1717  -0.1709  -0.1678  -0.1678  -0.1615  -0.1607
+    -0.1526  -0.1503  -0.1503  -0.1487  -0.1437  -0.1437  -0.1435  -0.1396
+    -0.1386  -0.1379  -0.1323  -0.1214  -0.1213  -0.1213  -0.1181  -0.1117
+    -0.1110  -0.1110  -0.1032  -0.0978  -0.0972  -0.0926  -0.0926  -0.0914
+    -0.0840  -0.0681  -0.0616  -0.0616  -0.0578  -0.0491  -0.0367   0.0350
+     0.0350   0.1371   0.1457   0.1457   0.1698   0.1775   0.1775   0.5951
+     0.5951   0.6061   0.6377   1.0243   1.0388   1.0734   1.0839   1.0839
+     1.1097   1.1114   1.1499   1.2539   1.2924   1.2924   1.3865   1.3875
+     1.4066   1.4066   1.4349   1.4912   1.8707   1.8707   1.8953   2.0590
+     2.2558   2.2800   2.2800   2.4551   2.5098   2.6026   2.7055   2.7055
+     2.7546   2.8201   2.8549   2.8549   2.8621   2.9102   2.9570   2.9596
+     2.9596   3.0443   3.0443   3.0548   3.1416   3.3099   3.3358   3.3476
+     3.3476   3.3664   3.3822   3.3822   3.4208   3.4464   3.4464   3.4621
+     3.4967   3.4967   3.5089   3.5608   3.6163   3.6163   3.7252   3.7586
+     3.9032   4.0188   4.0188   4.2420   4.2521   4.2957   4.2957   4.3687
+     4.3826   4.3826   4.4340   4.4925   4.4925   4.5086   4.5183   4.5253
+     4.5253   4.5641   4.6744   4.7050   4.7219   4.7263   4.7263   4.7268
+     4.7569   4.7569   4.7695   4.7981   4.7981   4.8430   4.9212   4.9463
+     4.9463   5.2660   5.5040   5.5040   8.0006   9.0536   9.0536   9.0552
+     9.1272   9.1380   9.2830   9.2830   9.5379   9.6931   9.7339   9.8594
+     9.8766  10.0648  10.0648  10.0778  10.0896  10.1029  10.1065  10.1065
+    10.1206  10.1959  10.3076  10.3090  10.3090  10.3433  10.3641  10.3915
+    10.3915  10.4072  10.4703  10.4711  10.4711  10.6529  10.7423  10.7423
+    10.7495  11.0848  11.0890  11.0910  11.0910  11.0928  11.2864  11.6101
+    11.6101  11.6171  11.7200  11.7912  11.8606  11.8855  11.8897  11.8898
+    12.0561  12.0565  12.0607  12.0666
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   0.0021   0.0021   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.0000-0.5000 (270152 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.3196  -7.2853  -6.8703  -6.8703
+    -6.8624  -6.8061  -6.8037  -6.7958  -6.7890  -6.7890  -6.6366  -6.6084
+    -6.6084  -6.5865  -6.5519  -6.5511  -6.5511  -6.5497  -6.4816  -6.4476
+    -6.3852  -6.3852  -6.3803  -6.3436  -6.3355  -6.3283  -6.3283  -6.3243
+    -6.2698  -6.2698  -6.2355  -6.2355  -0.6777  -0.6770  -0.6712  -0.6629
+    -0.6378  -0.6336  -0.6308  -0.6308  -0.6239  -0.6208  -0.6186  -0.6186
+    -0.6170  -0.6170  -0.6035  -0.6035  -0.5931  -0.5921  -0.5874  -0.5840
+    -0.5661  -0.5661  -0.5597  -0.5539  -0.5504  -0.5504  -0.5487  -0.5362
+    -0.5328  -0.5309  -0.5306  -0.5306  -0.5303  -0.5283  -0.5252  -0.5252
+    -0.5245  -0.5242  -0.5185  -0.5185  -0.5183  -0.5153  -0.5153  -0.5118
+    -0.5103  -0.5103  -0.5081  -0.5068  -0.5055  -0.5008  -0.5007  -0.5007
+    -0.4943  -0.4920  -0.4861  -0.4861  -0.4798  -0.4669  -0.4669  -0.4638
+    -0.4435  -0.4401  -0.4401  -0.4378  -0.4278  -0.4214  -0.4214  -0.3906
+    -0.3906  -0.3752  -0.3752  -0.3614  -0.3462  -0.3462  -0.3080  -0.3080
+    -0.3074  -0.3071  -0.2874  -0.2820  -0.2667  -0.2600  -0.2600  -0.2589
+    -0.2564  -0.2564  -0.2464  -0.2360  -0.2335  -0.2329  -0.2316  -0.2248
+    -0.2248  -0.2203  -0.2203  -0.2137  -0.2109  -0.2109  -0.2055  -0.2039
+    -0.1986  -0.1986  -0.1943  -0.1938  -0.1841  -0.1838  -0.1783  -0.1736
+    -0.1735  -0.1725  -0.1725  -0.1691  -0.1685  -0.1685  -0.1538  -0.1538
+    -0.1537  -0.1519  -0.1512  -0.1501  -0.1465  -0.1432  -0.1383  -0.1381
+    -0.1381  -0.1311  -0.1308  -0.1267  -0.1267  -0.1234  -0.1228  -0.1161
+    -0.1130  -0.1130  -0.1120  -0.1093  -0.1060  -0.1044  -0.1019  -0.1019
+    -0.0927  -0.0829  -0.0804  -0.0110  -0.0110   0.0137   0.0521   0.0617
+     0.0617   0.0620   0.0733   0.0983   0.0983   0.1336   0.1336   0.9228
+     0.9228   0.9569   0.9886   1.0000   1.0027   1.0027   1.0326   1.0342
+     1.0810   1.0817   1.1097   1.1165   1.1503   1.1503   1.1791   1.1863
+     1.1863   1.1922   1.3507   1.6566   1.7318   1.9077   1.9077   2.1129
+     2.3609   2.4816   2.4818   2.4818   2.5476   2.5631   2.5701   2.6149
+     2.6149   2.6530   2.6843   2.6843   2.6902   2.7080   2.8393   2.8393
+     3.0455   3.1595   3.1652   3.1652   3.1898   3.1898   3.1908   3.2407
+     3.2485   3.6125   3.6750   3.6750   3.7163   3.7163   3.8503   3.8648
+     3.8648   3.8882   3.8990   3.8990   3.9074   3.9167   3.9183   3.9357
+     3.9365   3.9365   3.9660   3.9831   3.9831   3.9993   4.0129   4.0129
+     4.0186   4.0399   4.1283   4.1283   4.1517   4.2508   4.5365   4.5635
+     4.6747   4.6747   4.6766   4.7022   4.7071   4.7071   4.7093   4.7244
+     4.7246   4.7291   4.7291   4.7488   4.8173   4.8576   4.8576   4.9314
+     5.1807   5.1807   5.2673   5.2673   8.7671   8.7821   9.3384   9.3523
+     9.5597   9.5597   9.5689   9.5767   9.5767   9.5846   9.5919   9.6938
+     9.8911   9.8967   9.8967   9.9077   9.9077   9.9363  10.1995  10.1995
+    10.2104  10.2325  10.2325  10.2343  10.2377  10.2999  10.3882  10.4049
+    10.4059  10.5239  10.7321  10.7321  10.7404  10.7469  10.7646  10.7690
+    10.7690  10.9072  10.9712  10.9926  10.9943  11.0015  11.0015  11.0294
+    11.0294  11.1558  11.2819  11.3290  11.8115  11.8142  11.8142  11.8282
+    11.8282  11.8382  11.8490  11.9567
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.2500 0.2500 (269929 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.3770  -7.1081  -7.0941  -6.9027
+    -6.8701  -6.8542  -6.7391  -6.7347  -6.7045  -6.6833  -6.6789  -6.6473
+    -6.6148  -6.6127  -6.5689  -6.5575  -6.5088  -6.5087  -6.4740  -6.4634
+    -6.4611  -6.4525  -6.3882  -6.3312  -6.3275  -6.3042  -6.2863  -6.2854
+    -6.2780  -6.2678  -6.2595  -6.2415  -0.6746  -0.6729  -0.6677  -0.6631
+    -0.6627  -0.6539  -0.6531  -0.6446  -0.6404  -0.6393  -0.6337  -0.6216
+    -0.5882  -0.5845  -0.5824  -0.5764  -0.5735  -0.5704  -0.5628  -0.5621
+    -0.5599  -0.5547  -0.5545  -0.5532  -0.5498  -0.5461  -0.5460  -0.5416
+    -0.5393  -0.5390  -0.5376  -0.5349  -0.5349  -0.5321  -0.5306  -0.5302
+    -0.5284  -0.5272  -0.5261  -0.5230  -0.5226  -0.5212  -0.5204  -0.5157
+    -0.5151  -0.5096  -0.5088  -0.5037  -0.5019  -0.5015  -0.4972  -0.4898
+    -0.4873  -0.4861  -0.4798  -0.4744  -0.4629  -0.4603  -0.4568  -0.4505
+    -0.4481  -0.4440  -0.4331  -0.4327  -0.4282  -0.4259  -0.4213  -0.4072
+    -0.4036  -0.3959  -0.3759  -0.3679  -0.3643  -0.3555  -0.3509  -0.3491
+    -0.3371  -0.3269  -0.3024  -0.2835  -0.2819  -0.2729  -0.2691  -0.2632
+    -0.2604  -0.2559  -0.2487  -0.2480  -0.2347  -0.2324  -0.2295  -0.2192
+    -0.2185  -0.2176  -0.2137  -0.2111  -0.2042  -0.1973  -0.1955  -0.1954
+    -0.1939  -0.1935  -0.1917  -0.1879  -0.1807  -0.1771  -0.1745  -0.1739
+    -0.1710  -0.1699  -0.1682  -0.1662  -0.1642  -0.1612  -0.1582  -0.1572
+    -0.1556  -0.1511  -0.1489  -0.1461  -0.1456  -0.1411  -0.1398  -0.1385
+    -0.1384  -0.1353  -0.1348  -0.1287  -0.1227  -0.1218  -0.1179  -0.1178
+    -0.1153  -0.1134  -0.1071  -0.1062  -0.0997  -0.0968  -0.0927  -0.0845
+    -0.0751  -0.0573  -0.0533  -0.0280  -0.0254   0.0042   0.0269   0.0356
+     0.0654   0.1083   0.1140   0.1375   0.1378   0.1650   0.1718   0.5215
+     0.5431   0.9043   0.9080   1.0137   1.0396   1.0522   1.0680   1.0881
+     1.1148   1.1167   1.1301   1.1400   1.1718   1.1730   1.2274   1.2453
+     1.3465   1.5024   1.6066   1.6926   1.7537   1.8133   1.8378   1.9648
+     2.1439   2.1769   2.3484   2.3609   2.5143   2.6115   2.6223   2.6403
+     2.6929   2.7049   2.7308   2.8401   2.8777   2.8814   2.9735   3.0570
+     3.1053   3.1457   3.1719   3.1976   3.2147   3.2864   3.2913   3.3660
+     3.3874   3.4012   3.4559   3.4560   3.4707   3.4921   3.5170   3.5176
+     3.5550   3.5886   3.6838   3.7241   3.8216   3.8526   3.8706   3.8791
+     3.8936   3.9073   3.9992   4.0829   4.0949   4.2229   4.2475   4.2729
+     4.3392   4.3423   4.3768   4.3859   4.3905   4.4194   4.4344   4.4516
+     4.4934   4.5232   4.5988   4.6189   4.6578   4.6621   4.6748   4.6878
+     4.7430   4.7495   4.7845   4.8301   4.8467   4.8758   4.9221   4.9652
+     5.0707   5.1419   5.3967   5.5643   8.2567   9.0770   9.1130   9.3548
+     9.3567   9.3596   9.3937   9.4278   9.5670   9.5944   9.9162   9.9211
+     9.9271   9.9291   9.9422   9.9540   9.9773   9.9969   9.9987  10.0022
+    10.0674  10.1588  10.1809  10.2041  10.2481  10.3284  10.3324  10.3402
+    10.3881  10.3972  10.4960  10.7018  10.7174  10.7418  10.8141  10.8169
+    10.8241  10.8985  10.9253  11.0104  11.0410  11.0882  11.2399  11.4557
+    11.4640  11.4911  11.5336  11.5363  11.6266  11.8123  11.8397  11.8491
+    11.8573  11.8595  11.9653  11.9672
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.2500-0.5000 (269962 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.2861  -7.2509  -7.0322  -6.9962
+    -6.8412  -6.8152  -6.7879  -6.7860  -6.6984  -6.6870  -6.6569  -6.6531
+    -6.6293  -6.5974  -6.5478  -6.5040  -6.4798  -6.4715  -6.4546  -6.4388
+    -6.4052  -6.3978  -6.3789  -6.3698  -6.3515  -6.3472  -6.3213  -6.3083
+    -6.2950  -6.2891  -6.2631  -6.2444  -0.6639  -0.6618  -0.6553  -0.6501
+    -0.6371  -0.6353  -0.6242  -0.6221  -0.6182  -0.6171  -0.6148  -0.6104
+    -0.6099  -0.6052  -0.6016  -0.5964  -0.5914  -0.5899  -0.5841  -0.5821
+    -0.5765  -0.5752  -0.5716  -0.5611  -0.5602  -0.5598  -0.5588  -0.5497
+    -0.5475  -0.5428  -0.5417  -0.5387  -0.5347  -0.5331  -0.5327  -0.5319
+    -0.5300  -0.5278  -0.5262  -0.5222  -0.5212  -0.5195  -0.5183  -0.5175
+    -0.5144  -0.5138  -0.5066  -0.5032  -0.4983  -0.4928  -0.4924  -0.4881
+    -0.4850  -0.4825  -0.4772  -0.4765  -0.4658  -0.4619  -0.4512  -0.4499
+    -0.4394  -0.4369  -0.4366  -0.4328  -0.4192  -0.4138  -0.4037  -0.3996
+    -0.3939  -0.3927  -0.3841  -0.3760  -0.3755  -0.3710  -0.3693  -0.3651
+    -0.3635  -0.3381  -0.3205  -0.3138  -0.3063  -0.2969  -0.2883  -0.2831
+    -0.2548  -0.2421  -0.2343  -0.2316  -0.2311  -0.2287  -0.2261  -0.2179
+    -0.2176  -0.2156  -0.2129  -0.2049  -0.1994  -0.1989  -0.1973  -0.1972
+    -0.1935  -0.1886  -0.1878  -0.1811  -0.1776  -0.1752  -0.1747  -0.1701
+    -0.1686  -0.1663  -0.1632  -0.1616  -0.1582  -0.1533  -0.1522  -0.1509
+    -0.1497  -0.1490  -0.1467  -0.1445  -0.1394  -0.1387  -0.1380  -0.1355
+    -0.1339  -0.1305  -0.1296  -0.1293  -0.1265  -0.1216  -0.1213  -0.1163
+    -0.1157  -0.1149  -0.1137  -0.1079  -0.1061  -0.1006  -0.0949  -0.0756
+    -0.0544  -0.0176  -0.0092  -0.0057   0.0033   0.0166   0.0320   0.0522
+     0.0654   0.0788   0.0834   0.0950   0.1290   0.1293   0.1478   0.7636
+     0.7769   0.7879   0.7960   0.9941   1.0103   1.0131   1.0248   1.0546
+     1.0551   1.0876   1.1084   1.2213   1.2281   1.2630   1.2741   1.3248
+     1.3645   1.3737   1.3925   1.6258   1.6862   1.8359   1.8702   1.9619
+     2.1125   2.1430   2.2442   2.4059   2.4243   2.4489   2.4877   2.5928
+     2.6840   2.7638   2.8123   2.8856   2.8955   2.9115   2.9390   2.9928
+     3.0844   3.1154   3.1500   3.1727   3.2408   3.3131   3.3801   3.4757
+     3.5531   3.5568   3.5600   3.5782   3.6369   3.6666   3.6701   3.7068
+     3.7333   3.7465   3.7553   3.7681   3.7930   3.8621   3.9116   3.9460
+     3.9634   3.9795   3.9981   4.0920   4.1350   4.1502   4.1677   4.1873
+     4.1884   4.2326   4.2337   4.2703   4.3027   4.3029   4.3474   4.3605
+     4.3775   4.4220   4.4696   4.4884   4.5420   4.5687   4.6455   4.6779
+     4.6891   4.7338   4.7714   4.7887   4.8123   4.8494   5.0664   5.1474
+     5.1729   5.1769   5.3682   5.3934   8.8676   8.8804   9.4487   9.4600
+     9.4681   9.5099   9.5742   9.5877   9.7008   9.7051   9.7235   9.7305
+     9.8981   9.9113   9.9148   9.9212   9.9310   9.9377   9.9403   9.9784
+     9.9888  10.0129  10.0622  10.1080  10.1322  10.2036  10.4304  10.4536
+    10.5042  10.5589  10.5745  10.5767  10.6688  10.6836  10.7048  10.7694
+    10.8226  10.8789  10.9614  11.0669  11.1099  11.1548  11.3440  11.3531
+    11.3794  11.3859  11.4288  11.4301  11.4352  11.5131  11.6090  11.6090
+    11.6216  11.6568  11.8164  11.8185
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000-0.5000-0.5000 (269920 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.2088  -7.1616  -7.1616  -7.1390
+    -6.8172  -6.7743  -6.7624  -6.7624  -6.7279  -6.7279  -6.7164  -6.7160
+    -6.5368  -6.5368  -6.4607  -6.4367  -6.4192  -6.4185  -6.4139  -6.4139
+    -6.4053  -6.4053  -6.3993  -6.3991  -6.3991  -6.3981  -6.3770  -6.3770
+    -6.3096  -6.2733  -6.2733  -6.2577  -0.6488  -0.6441  -0.6421  -0.6421
+    -0.6193  -0.6158  -0.6109  -0.6109  -0.6057  -0.6057  -0.6039  -0.5981
+    -0.5981  -0.5977  -0.5957  -0.5926  -0.5926  -0.5907  -0.5876  -0.5876
+    -0.5876  -0.5874  -0.5864  -0.5808  -0.5808  -0.5743  -0.5646  -0.5614
+    -0.5614  -0.5581  -0.5572  -0.5548  -0.5485  -0.5408  -0.5408  -0.5336
+    -0.5314  -0.5314  -0.5270  -0.5234  -0.5184  -0.5184  -0.5177  -0.5174
+    -0.5148  -0.5061  -0.5061  -0.5029  -0.4840  -0.4780  -0.4763  -0.4763
+    -0.4718  -0.4689  -0.4652  -0.4652  -0.4625  -0.4597  -0.4597  -0.4594
+    -0.4527  -0.4526  -0.4338  -0.4337  -0.4337  -0.4250  -0.4250  -0.4115
+    -0.4115  -0.4108  -0.4108  -0.3927  -0.3825  -0.3783  -0.3783  -0.3573
+    -0.3518  -0.3516  -0.3399  -0.3390  -0.3390  -0.3101  -0.2839  -0.2839
+    -0.2669  -0.2548  -0.2414  -0.2414  -0.2273  -0.2273  -0.2253  -0.2152
+    -0.2127  -0.2114  -0.2114  -0.2021  -0.1960  -0.1945  -0.1945  -0.1887
+    -0.1878  -0.1860  -0.1851  -0.1851  -0.1786  -0.1741  -0.1639  -0.1639
+    -0.1577  -0.1550  -0.1550  -0.1538  -0.1505  -0.1493  -0.1493  -0.1491
+    -0.1446  -0.1446  -0.1420  -0.1420  -0.1399  -0.1369  -0.1369  -0.1366
+    -0.1346  -0.1328  -0.1248  -0.1196  -0.1196  -0.1180  -0.1151  -0.1151
+    -0.1145  -0.1063  -0.1063  -0.1034  -0.0991  -0.0975  -0.0790  -0.0719
+    -0.0705  -0.0630  -0.0630   0.0228   0.0228   0.0353   0.0808   0.0901
+     0.0916   0.0953   0.0953   0.1204   0.1501   0.1501   0.1705   0.7868
+     0.7949   0.7949   0.7999   0.8043   0.8061   0.8061   0.8546   1.0396
+     1.0396   1.0638   1.0852   1.3604   1.3604   1.4463   1.4667   1.5659
+     1.5659   1.5783   1.5975   1.6260   1.7281   1.7281   1.7992   1.7992
+     1.8048   1.8146   1.9031   2.3022   2.3022   2.3710   2.4081   2.5934
+     2.5934   2.5945   2.8863   3.0617   3.2564   3.2589   3.2589   3.2906
+     3.2951   3.2951   3.2962   3.2983   3.3049   3.3049   3.3348   3.3725
+     3.3725   3.4318   3.5392   3.5573   3.6220   3.6405   3.6559   3.6559
+     3.6855   3.7223   3.7223   3.7265   3.7818   3.7818   3.7970   3.8230
+     3.8330   3.9214   3.9214   3.9422   4.1530   4.1530   4.1683   4.1858
+     4.1858   4.2251   4.2426   4.2697   4.4577   4.4577   4.4826   4.4913
+     4.4913   4.4922   4.5354   4.5451   4.5451   4.5511   4.5521   4.5800
+     4.5898   4.6016   4.7143   4.7143   4.7655   4.7655   4.7727   4.9524
+     5.3698   5.3851   5.4473   5.4473   9.1827   9.1827   9.2038   9.2168
+     9.5690   9.5923   9.5923   9.5972   9.5996   9.5996   9.6089   9.6881
+     9.7254   9.7254   9.7543   9.8186  10.1973  10.1979  10.2087  10.2117
+    10.2145  10.2145  10.2348  10.2348  10.3320  10.3557  10.3557  10.3636
+    10.3700  10.3771  10.3771  10.4378  10.5004  10.5004  10.5082  10.5082
+    10.5193  10.5247  10.5296  10.9096  11.4727  11.4727  11.4919  11.5435
+    11.5510  11.5510  11.5510  11.5529  11.5698  11.5763  11.5789  11.5789
+    11.6685  11.6779  11.6779  11.7206
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   0.9988   0.9988   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2500 0.2500 0.2500 (269935 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.3414  -7.0871  -7.0657  -7.0657
+    -6.8712  -6.8541  -6.8541  -6.7274  -6.6772  -6.6604  -6.6604  -6.5828
+    -6.5828  -6.5565  -6.5242  -6.5240  -6.5240  -6.5030  -6.5030  -6.5017
+    -6.4208  -6.3949  -6.3949  -6.3311  -6.3311  -6.3273  -6.2921  -6.2920
+    -6.2920  -6.2810  -6.2810  -6.2806  -0.6612  -0.6612  -0.6592  -0.6542
+    -0.6474  -0.6474  -0.6461  -0.6316  -0.6316  -0.6288  -0.6228  -0.6228
+    -0.5884  -0.5884  -0.5856  -0.5781  -0.5761  -0.5761  -0.5691  -0.5691
+    -0.5689  -0.5639  -0.5639  -0.5552  -0.5552  -0.5531  -0.5472  -0.5472
+    -0.5465  -0.5460  -0.5424  -0.5424  -0.5396  -0.5396  -0.5386  -0.5371
+    -0.5352  -0.5318  -0.5318  -0.5248  -0.5247  -0.5247  -0.5220  -0.5220
+    -0.5187  -0.5142  -0.5142  -0.5120  -0.5012  -0.5012  -0.4965  -0.4885
+    -0.4885  -0.4849  -0.4849  -0.4595  -0.4594  -0.4500  -0.4500  -0.4496
+    -0.4380  -0.4380  -0.4289  -0.4262  -0.4262  -0.4123  -0.4083  -0.4083
+    -0.3887  -0.3816  -0.3816  -0.3567  -0.3559  -0.3550  -0.3550  -0.3507
+    -0.3484  -0.3484  -0.3374  -0.3359  -0.3359  -0.2816  -0.2816  -0.2726
+    -0.2673  -0.2673  -0.2672  -0.2473  -0.2367  -0.2367  -0.2209  -0.2209
+    -0.2179  -0.2146  -0.2146  -0.2129  -0.2011  -0.1962  -0.1962  -0.1905
+    -0.1905  -0.1836  -0.1812  -0.1807  -0.1807  -0.1721  -0.1721  -0.1685
+    -0.1655  -0.1655  -0.1648  -0.1582  -0.1582  -0.1549  -0.1549  -0.1549
+    -0.1454  -0.1454  -0.1443  -0.1427  -0.1394  -0.1394  -0.1373  -0.1373
+    -0.1367  -0.1310  -0.1275  -0.1234  -0.1234  -0.1169  -0.1169  -0.1124
+    -0.1107  -0.1107  -0.1042  -0.1000  -0.1000  -0.0957  -0.0936  -0.0936
+    -0.0469  -0.0419  -0.0419  -0.0009   0.0023   0.0023   0.0333   0.0391
+     0.0391   0.1028   0.1028   0.1223   0.1261   0.1261   0.1269   0.6825
+     0.6825   0.7222   0.9672   0.9726   0.9726   1.0599   1.0599   1.0842
+     1.0842   1.0870   1.1649   1.2183   1.2183   1.2444   1.2981   1.3393
+     1.3393   1.4615   1.4645   1.4645   1.5490   1.8478   1.9466   1.9466
+     2.1355   2.1355   2.2659   2.4210   2.4210   2.5120   2.6172   2.6172
+     2.7788   2.8099   2.8099   2.8319   2.8808   2.8808   2.9046   3.1235
+     3.1235   3.2048   3.2500   3.2500   3.2751   3.3546   3.3546   3.4080
+     3.4135   3.4135   3.4505   3.5164   3.5164   3.5619   3.5784   3.5784
+     3.5923   3.6153   3.6153   3.6205   3.8080   3.8080   3.8831   3.9100
+     3.9100   4.0645   4.1055   4.1055   4.1542   4.1542   4.1703   4.2130
+     4.2130   4.2506   4.2691   4.3062   4.3062   4.3415   4.3594   4.3594
+     4.4295   4.4326   4.4326   4.4998   4.5746   4.5746   4.5995   4.8067
+     4.8341   4.8341   4.8827   4.8827   4.9185   4.9185   5.0267   5.0593
+     5.1347   5.1347   5.4717   5.4717   8.4232   8.9301   9.4268   9.4268
+     9.4299   9.5058   9.5058   9.5138   9.5237   9.5237   9.5829   9.6512
+     9.6512   9.7064   9.9117   9.9117   9.9394  10.1354  10.1354  10.1634
+    10.2134  10.2134  10.2474  10.3705  10.3739  10.3739  10.3831  10.3831
+    10.4324  10.4411  10.4411  10.4424  10.4573  10.4573  10.4937  10.5240
+    10.5240  10.7946  11.1488  11.1488  11.1960  11.4634  11.4762  11.4762
+    11.4894  11.4895  11.5630  11.5745  11.5745  11.5753  11.6072  11.6072
+    11.6870  11.8808  11.9884  11.9909
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   0.6916   0.6916   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2500 0.2500-0.5000 (269988 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.2539  -7.2175  -7.0217  -6.9997
+    -6.9651  -6.9622  -6.8196  -6.7843  -6.6636  -6.6436  -6.6085  -6.5832
+    -6.5648  -6.5521  -6.5085  -6.5082  -6.4957  -6.4574  -6.4330  -6.4285
+    -6.4107  -6.4048  -6.3823  -6.3813  -6.3611  -6.3458  -6.3236  -6.3170
+    -6.3112  -6.3102  -6.2834  -6.2834  -0.6562  -0.6516  -0.6376  -0.6349
+    -0.6301  -0.6257  -0.6237  -0.6218  -0.6148  -0.6147  -0.6101  -0.6064
+    -0.6013  -0.6002  -0.5972  -0.5912  -0.5855  -0.5843  -0.5836  -0.5825
+    -0.5771  -0.5770  -0.5732  -0.5731  -0.5680  -0.5669  -0.5629  -0.5621
+    -0.5563  -0.5530  -0.5524  -0.5476  -0.5471  -0.5445  -0.5418  -0.5397
+    -0.5371  -0.5363  -0.5321  -0.5320  -0.5284  -0.5275  -0.5233  -0.5216
+    -0.5194  -0.5156  -0.5069  -0.5002  -0.4893  -0.4885  -0.4823  -0.4789
+    -0.4787  -0.4768  -0.4746  -0.4653  -0.4597  -0.4505  -0.4476  -0.4461
+    -0.4377  -0.4335  -0.4285  -0.4241  -0.4192  -0.4164  -0.4116  -0.4110
+    -0.4030  -0.3973  -0.3947  -0.3888  -0.3821  -0.3728  -0.3710  -0.3422
+    -0.3418  -0.3188  -0.3113  -0.3057  -0.3018  -0.2976  -0.2961  -0.2918
+    -0.2893  -0.2854  -0.2817  -0.2578  -0.2559  -0.2439  -0.2376  -0.2375
+    -0.2193  -0.2130  -0.2130  -0.2053  -0.1989  -0.1973  -0.1931  -0.1877
+    -0.1860  -0.1799  -0.1791  -0.1757  -0.1754  -0.1731  -0.1697  -0.1675
+    -0.1601  -0.1598  -0.1584  -0.1576  -0.1570  -0.1497  -0.1479  -0.1464
+    -0.1418  -0.1408  -0.1398  -0.1370  -0.1354  -0.1340  -0.1318  -0.1293
+    -0.1264  -0.1259  -0.1256  -0.1232  -0.1202  -0.1190  -0.1156  -0.1152
+    -0.1142  -0.1045  -0.1021  -0.1012  -0.0986  -0.0933  -0.0864  -0.0728
+    -0.0645  -0.0520  -0.0335   0.0058   0.0091   0.0149   0.0370   0.0625
+     0.0717   0.0767   0.0787   0.0883   0.1124   0.1257   0.1303   0.7181
+     0.7291   0.9451   0.9712   0.9763   0.9878   0.9914   1.0490   1.0586
+     1.0755   1.1407   1.1497   1.1547   1.1739   1.1994   1.2018   1.2245
+     1.2961   1.5159   1.5559   1.6206   1.7136   1.7437   1.8018   1.8139
+     1.8542   2.0807   2.2054   2.3492   2.5838   2.6577   2.7573   2.7665
+     2.7725   2.7987   2.8261   2.8454   2.9057   2.9256   2.9552   2.9596
+     3.0296   3.0356   3.1220   3.1342   3.2686   3.3808   3.4331   3.4834
+     3.5195   3.6105   3.6176   3.6410   3.6476   3.6507   3.6966   3.7152
+     3.7206   3.7434   3.7874   3.8145   3.8544   3.8695   3.8730   3.8824
+     3.8875   3.8935   3.9147   3.9218   3.9508   3.9741   4.0343   4.0440
+     4.0448   4.1512   4.1970   4.2282   4.2317   4.3034   4.3707   4.3934
+     4.4282   4.4415   4.4575   4.4617   4.5800   4.5906   4.6072   4.6198
+     4.7064   4.7609   4.9851   5.0085   5.0740   5.1064   5.1193   5.1442
+     5.1728   5.2769   5.3219   5.3438   8.8910   8.9050   9.1630   9.1873
+     9.4782   9.4857   9.4863   9.5193   9.6318   9.6510   9.7883   9.7898
+     9.7910   9.7976   9.8780   9.8865   9.8951   9.9103   9.9534   9.9979
+    10.1010  10.1070  10.1138  10.1260  10.1566  10.1579  10.1604  10.2580
+    10.3524  10.3895  10.5144  10.5329  10.5343  10.6499  10.8501  10.8618
+    10.8704  10.9501  11.0964  11.1000  11.1037  11.1756  11.4287  11.4526
+    11.4532  11.5050  11.6185  11.6257  11.7195  11.7216  11.7238  11.7488
+    11.7588  11.7714  11.7790  11.7907
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2500-0.5000-0.5000 (269956 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.1807  -7.1315  -7.1315  -7.1090
+    -6.9506  -6.9065  -6.9065  -6.8816  -6.6419  -6.5988  -6.5988  -6.5480
+    -6.5166  -6.5166  -6.4571  -6.4339  -6.4173  -6.4168  -6.4125  -6.4125
+    -6.4061  -6.4061  -6.4012  -6.4008  -6.4003  -6.3983  -6.3780  -6.3780
+    -6.3392  -6.3080  -6.3080  -6.2930  -0.6391  -0.6344  -0.6344  -0.6335
+    -0.6155  -0.6096  -0.6095  -0.6095  -0.6038  -0.5995  -0.5986  -0.5986
+    -0.5959  -0.5959  -0.5912  -0.5912  -0.5907  -0.5858  -0.5858  -0.5855
+    -0.5813  -0.5808  -0.5799  -0.5772  -0.5772  -0.5759  -0.5716  -0.5646
+    -0.5638  -0.5627  -0.5627  -0.5579  -0.5571  -0.5571  -0.5551  -0.5492
+    -0.5437  -0.5418  -0.5418  -0.5371  -0.5363  -0.5339  -0.5339  -0.5285
+    -0.5278  -0.5180  -0.5174  -0.5174  -0.4909  -0.4824  -0.4824  -0.4802
+    -0.4632  -0.4548  -0.4528  -0.4528  -0.4508  -0.4496  -0.4408  -0.4401
+    -0.4401  -0.4217  -0.4217  -0.4153  -0.4153  -0.4116  -0.4111  -0.4036
+    -0.3942  -0.3909  -0.3909  -0.3882  -0.3748  -0.3731  -0.3731  -0.3571
+    -0.3506  -0.3504  -0.3402  -0.3402  -0.3397  -0.3074  -0.2980  -0.2980
+    -0.2805  -0.2749  -0.2725  -0.2725  -0.2610  -0.2610  -0.2607  -0.2498
+    -0.2461  -0.2089  -0.2050  -0.2050  -0.1990  -0.1930  -0.1930  -0.1857
+    -0.1803  -0.1779  -0.1771  -0.1771  -0.1746  -0.1680  -0.1677  -0.1677
+    -0.1559  -0.1547  -0.1547  -0.1508  -0.1508  -0.1490  -0.1408  -0.1384
+    -0.1371  -0.1356  -0.1356  -0.1304  -0.1304  -0.1269  -0.1267  -0.1232
+    -0.1205  -0.1205  -0.1202  -0.1169  -0.1169  -0.1125  -0.1125  -0.1112
+    -0.1105  -0.0976  -0.0964  -0.0964  -0.0946  -0.0830  -0.0642  -0.0571
+    -0.0556  -0.0474  -0.0474   0.0053   0.0053   0.0211   0.0439   0.0508
+     0.0532   0.0593   0.0593   0.0771   0.1017   0.1017   0.1201   0.8841
+     0.8841   0.8993   0.9205   0.9234   0.9285   0.9285   0.9556   1.0550
+     1.0628   1.0628   1.0850   1.2879   1.2879   1.3325   1.3769   1.4377
+     1.4377   1.4522   1.4538   1.4594   1.4594   1.4635   1.5569   1.9946
+     2.0167   2.0167   2.2749   2.4310   2.4310   2.4922   2.5664   2.7804
+     2.7804   2.7906   2.7994   3.0887   3.2365   3.2365   3.2405   3.2624
+     3.2705   3.2705   3.2719   3.2804   3.2804   3.2823   3.2992   3.3063
+     3.3063   3.3277   3.3370   3.4217   3.4683   3.4683   3.5342   3.6482
+     3.8026   3.8235   3.8235   3.8451   3.8571   3.8571   3.8632   3.8632
+     3.8708   3.8731   3.8783   3.9509   3.9692   3.9791   3.9791   4.0125
+     4.1269   4.1269   4.1428   4.1607   4.1607   4.1924   4.2270   4.2576
+     4.3089   4.3352   4.3452   4.3452   4.8442   4.8654   4.8893   4.8893
+     4.9468   4.9468   4.9523   4.9620   4.9729   5.0007   5.0007   5.1413
+     5.3020   5.3172   5.3870   5.3870   9.0685   9.0685   9.0794   9.1002
+     9.1863   9.1863   9.1864   9.2533   9.7794   9.7794   9.8062   9.8171
+     9.8966   9.8966   9.9093   9.9274   9.9545   9.9587   9.9587   9.9610
+     9.9695   9.9765   9.9765  10.0241  10.1269  10.1349  10.1349  10.1419
+    10.1462  10.1561  10.1561  10.3815  10.9469  10.9491  10.9491  10.9603
+    10.9654  10.9656  10.9656  11.1047  11.4790  11.4790  11.4987  11.5382
+    11.5660  11.5660  11.5836  11.6061  11.6770  11.6796  11.6796  11.6859
+    11.6904  11.7057  11.7058  11.8078
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k =-0.5000-0.5000-0.5000 (269968 PWs)   bands (ev):
+
+   -90.8513 -54.1067 -54.1067 -54.1067  -7.1246  -7.0598  -7.0598  -7.0598
+    -7.0242  -7.0242  -7.0242  -7.0044  -6.5655  -6.5655  -6.5655  -6.4513
+    -6.4147  -6.4147  -6.4147  -6.4147  -6.4147  -6.4122  -6.4122  -6.4122
+    -6.4057  -6.4057  -6.4057  -6.4036  -6.4036  -6.4031  -6.4031  -6.4031
+    -6.3945  -6.3728  -6.3728  -6.3728  -0.6205  -0.6205  -0.6205  -0.6061
+    -0.6061  -0.6061  -0.6044  -0.6026  -0.6026  -0.6026  -0.5994  -0.5994
+    -0.5983  -0.5931  -0.5931  -0.5931  -0.5924  -0.5924  -0.5924  -0.5880
+    -0.5880  -0.5748  -0.5748  -0.5748  -0.5691  -0.5691  -0.5691  -0.5667
+    -0.5667  -0.5667  -0.5664  -0.5660  -0.5660  -0.5660  -0.5620  -0.5620
+    -0.5620  -0.5514  -0.5514  -0.5511  -0.5500  -0.5500  -0.5500  -0.5433
+    -0.5433  -0.5286  -0.5286  -0.5286  -0.4625  -0.4591  -0.4591  -0.4591
+    -0.4404  -0.4404  -0.4404  -0.4382  -0.4382  -0.4301  -0.4301  -0.4301
+    -0.4266  -0.4266  -0.4253  -0.4253  -0.4253  -0.4191  -0.4191  -0.4191
+    -0.4170  -0.3814  -0.3814  -0.3814  -0.3269  -0.3269  -0.3269  -0.3265
+    -0.3254  -0.3254  -0.3254  -0.3222  -0.3222  -0.3222  -0.3173  -0.3173
+    -0.3173  -0.3130  -0.3130  -0.3058  -0.3058  -0.3058  -0.3032  -0.3029
+    -0.3029  -0.2003  -0.2003  -0.2003  -0.1915  -0.1915  -0.1915  -0.1883
+    -0.1883  -0.1757  -0.1757  -0.1757  -0.1724  -0.1724  -0.1724  -0.1594
+    -0.1532  -0.1532  -0.1532  -0.1485  -0.1485  -0.1485  -0.1415  -0.1415
+    -0.1227  -0.1227  -0.1227  -0.1223  -0.1223  -0.1223  -0.1218  -0.1218
+    -0.1218  -0.1145  -0.1145  -0.1145  -0.1109  -0.1054  -0.1054  -0.1054
+    -0.0963  -0.0963  -0.0329  -0.0329  -0.0182  -0.0182  -0.0182  -0.0142
+    -0.0132  -0.0132  -0.0132  -0.0104  -0.0104  -0.0104  -0.0057  -0.0057
+    -0.0048  -0.0048  -0.0048   0.0091   0.0091   0.0091   0.0091   1.0327
+     1.0327   1.0327   1.1179   1.1179   1.1616   1.1616   1.1616   1.1629
+     1.1629   1.1629   1.1985   1.1985   1.1985   1.2015   1.2015   1.2038
+     1.2038   1.2038   1.2046   1.2046   1.2046   1.2200   1.4377   2.0494
+     2.0494   2.0494   2.7356   2.7356   2.7931   2.7931   2.7931   2.7984
+     2.8384   2.9283   2.9283   2.9283   3.2206   3.2206   3.2206   3.2343
+     3.2343   3.2343   3.2555   3.2555   3.2555   3.2584   3.2596   3.2596
+     3.2596   3.2677   3.2677   3.2679   3.2679   3.2679   3.3237   3.4339
+     3.4339   3.4339   3.7304   3.7304   3.9610   3.9610   3.9610   4.0282
+     4.0282   4.0282   4.0318   4.0332   4.0332   4.0354   4.0354   4.0354
+     4.0356   4.0360   4.0360   4.0360   4.0479   4.0479   4.0479   4.2093
+     4.2093   4.2367   4.2367   4.2367   5.1019   5.1019   5.1019   5.1221
+     5.1221   5.1221   5.1250   5.1250   5.1325   5.1325   5.1325   5.1377
+     5.1377   5.2881   5.2881   5.2881   8.9741   8.9741   8.9741   8.9832
+     8.9832   8.9832   8.9848   9.0879   9.8865   9.8865   9.8865   9.8888
+     9.8888   9.8888   9.9049   9.9049   9.9067   9.9067   9.9067   9.9082
+     9.9082   9.9082   9.9102   9.9102   9.9102   9.9114   9.9279   9.9279
+     9.9375   9.9375   9.9375  10.2566  11.4575  11.4575  11.4575  11.4853
+    11.4853  11.4853  11.4892  11.4892  11.5033  11.5033  11.5033  11.5127
+    11.5127  11.5129  11.5129  11.5129  11.5135  11.5139  11.5139  11.5139
+    11.5340  11.5340  11.5340  11.9037
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+ ------ SPIN DOWN ----------
+
+
+          k = 0.0000 0.0000 0.0000 (269825 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.4339  -6.9012  -6.9012  -6.9012
+    -6.8937  -6.8937  -6.8898  -6.5973  -6.5973  -6.5973  -6.5722  -6.5722
+    -6.5722  -6.5720  -6.5720  -6.5720  -6.5717  -6.5717  -6.5680  -6.5423
+    -6.5423  -6.5423  -6.5411  -6.2670  -6.2670  -6.2670  -6.2443  -6.2443
+    -6.2443  -6.2354  -6.2354  -6.2354  -0.6943  -0.6943  -0.6874  -0.6823
+    -0.6823  -0.6823  -0.6611  -0.6532  -0.6532  -0.6489  -0.6489  -0.6489
+    -0.5636  -0.5636  -0.5636  -0.5529  -0.5529  -0.5529  -0.5475  -0.5475
+    -0.5392  -0.5392  -0.5392  -0.5318  -0.5318  -0.5318  -0.5317  -0.5283
+    -0.5249  -0.5249  -0.5249  -0.5218  -0.5218  -0.5218  -0.5185  -0.5185
+    -0.5185  -0.5178  -0.5178  -0.5120  -0.5120  -0.5120  -0.5097  -0.5097
+    -0.5054  -0.5054  -0.5054  -0.4975  -0.4949  -0.4949  -0.4936  -0.4936
+    -0.4936  -0.4906  -0.4906  -0.4906  -0.4856  -0.4856  -0.4856  -0.4318
+    -0.4318  -0.4318  -0.3886  -0.3886  -0.3886  -0.3816  -0.3816  -0.3816
+    -0.3673  -0.3673  -0.3673  -0.3668  -0.3668  -0.3668  -0.3618  -0.3618
+    -0.3435  -0.3332  -0.3332  -0.3332  -0.3233  -0.3233  -0.3233  -0.2485
+    -0.2485  -0.2485  -0.2421  -0.2421  -0.2421  -0.2332  -0.2332  -0.2214
+    -0.2142  -0.2142  -0.2142  -0.2121  -0.2121  -0.2088  -0.2018  -0.2018
+    -0.2018  -0.2015  -0.1860  -0.1860  -0.1860  -0.1858  -0.1858  -0.1753
+    -0.1738  -0.1738  -0.1738  -0.1708  -0.1708  -0.1708  -0.1668  -0.1668
+    -0.1483  -0.1483  -0.1465  -0.1465  -0.1465  -0.1401  -0.1366  -0.1366
+    -0.1366  -0.1282  -0.1282  -0.1196  -0.1196  -0.1196  -0.1063  -0.1063
+    -0.1063  -0.1051  -0.1051  -0.1051  -0.1005  -0.1003  -0.1003  -0.0938
+    -0.0883  -0.0883  -0.0155  -0.0155  -0.0155   0.0211   0.0371   0.0371
+     0.0371   0.1756   0.1756   0.1756   0.2078   0.2078   0.2078   0.4175
+     0.4175   0.4175   0.4715   1.0360   1.0360   1.0768   1.0768   1.0768
+     1.1036   1.1036   1.1138   1.2623   1.5804   1.5804   1.5804   1.6906
+     1.6906   1.6906   1.6962   1.6962   1.6972   1.6972   1.6972   1.9384
+     2.7816   2.7816   2.7953   2.7953   2.7953   2.9195   2.9195   2.9195
+     2.9346   2.9346   2.9346   2.9466   2.9726   2.9726   2.9726   3.0153
+     3.0153   3.0995   3.1184   3.1184   3.1198   3.1198   3.1198   3.1443
+     3.1443   3.1443   3.1576   3.1576   3.1576   3.2472   3.4052   3.4052
+     3.4052   3.4185   3.4185   3.4185   4.0272   4.0272   4.0272   4.3718
+     4.3718   4.3718   4.3793   4.3793   4.3793   4.3857   4.3857   4.3857
+     4.4333   4.4333   4.5576   4.5576   4.5576   4.6795   4.6795   4.6795
+     4.6977   4.6977   4.6977   4.6981   4.7288   4.7288   4.7311   4.7311
+     4.7311   4.7336   4.7336   4.7336   5.4381   5.4381   5.4668   5.4668
+     5.4668   6.6508   6.6508   6.6508   7.6224   8.8487   8.8487   8.8487
+     8.9451   9.0894   9.0894   9.0894   9.6756   9.6756   9.6981  10.0114
+    10.0114  10.0114  10.0312  10.0312  10.0531  10.1521  10.1521  10.1840
+    10.1840  10.1840  10.1976  10.3365  10.3365  10.3365  10.3381  10.3381
+    10.3381  10.3587  10.3587  10.3810  10.3810  10.3810  10.8509  11.2835
+    11.2835  11.2835  11.3497  11.3497  11.3497  11.4890  11.4890  11.4890
+    11.5072  11.5072  11.9238  11.9851  11.9851  11.9852  12.2221  12.2221
+    12.2221  12.2246  12.2255  12.2264
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.8436   0.8436
+     0.8436   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.0000 0.2500 (269876 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.3958  -7.1121  -6.8775  -6.8775
+    -6.8695  -6.8675  -6.7021  -6.7021  -6.6988  -6.6960  -6.6669  -6.5799
+    -6.5799  -6.5794  -6.5673  -6.5505  -6.5501  -6.5501  -6.5470  -6.4510
+    -6.4510  -6.4496  -6.4468  -6.3121  -6.2781  -6.2781  -6.2692  -6.2673
+    -6.2554  -6.2554  -6.2377  -6.2377  -0.6874  -0.6775  -0.6773  -0.6720
+    -0.6661  -0.6661  -0.6606  -0.6534  -0.6400  -0.6400  -0.6379  -0.6333
+    -0.5764  -0.5764  -0.5693  -0.5613  -0.5613  -0.5557  -0.5510  -0.5500
+    -0.5500  -0.5473  -0.5447  -0.5431  -0.5421  -0.5421  -0.5373  -0.5344
+    -0.5327  -0.5327  -0.5308  -0.5301  -0.5278  -0.5254  -0.5249  -0.5249
+    -0.5198  -0.5177  -0.5175  -0.5175  -0.5159  -0.5154  -0.5154  -0.5129
+    -0.5086  -0.5086  -0.5082  -0.5056  -0.5032  -0.5003  -0.4978  -0.4978
+    -0.4941  -0.4782  -0.4782  -0.4745  -0.4729  -0.4681  -0.4681  -0.4635
+    -0.4569  -0.4516  -0.4516  -0.4208  -0.4208  -0.4129  -0.4032  -0.3956
+    -0.3956  -0.3576  -0.3576  -0.3561  -0.3396  -0.3396  -0.3391  -0.3348
+    -0.3348  -0.3285  -0.3201  -0.2850  -0.2850  -0.2807  -0.2733  -0.2617
+    -0.2613  -0.2415  -0.2415  -0.2313  -0.2257  -0.2257  -0.2231  -0.2204
+    -0.2145  -0.2145  -0.2137  -0.2079  -0.1996  -0.1996  -0.1986  -0.1968
+    -0.1967  -0.1881  -0.1833  -0.1821  -0.1821  -0.1809  -0.1766  -0.1745
+    -0.1745  -0.1725  -0.1711  -0.1702  -0.1678  -0.1678  -0.1603  -0.1600
+    -0.1525  -0.1496  -0.1496  -0.1483  -0.1431  -0.1429  -0.1429  -0.1398
+    -0.1374  -0.1358  -0.1318  -0.1206  -0.1204  -0.1204  -0.1180  -0.1120
+    -0.1104  -0.1104  -0.1022  -0.0979  -0.0971  -0.0916  -0.0902  -0.0902
+    -0.0826  -0.0678  -0.0596  -0.0596  -0.0569  -0.0437  -0.0359   0.0393
+     0.0393   0.1425   0.1489   0.1489   0.1702   0.1780   0.1780   0.6065
+     0.6065   0.6144   0.6525   1.0439   1.0587   1.0815   1.0925   1.0925
+     1.1090   1.1106   1.1926   1.2772   1.3598   1.3598   1.3905   1.4153
+     1.4199   1.4199   1.4459   1.5867   2.0220   2.0220   2.0662   2.0847
+     2.3441   2.6306   2.6594   2.6594   2.6628   2.7417   2.7417   2.7834
+     2.8456   2.8589   2.8589   2.8616   2.8650   2.9758   2.9931   2.9931
+     2.9975   3.2415   3.2843   3.2843   3.3034   3.3338   3.3542   3.3594
+     3.3594   3.3937   3.4274   3.4274   3.4344   3.4645   3.4645   3.5029
+     3.5058   3.5058   3.5453   3.6980   3.9106   3.9106   4.0576   4.1051
+     4.1051   4.2319   4.2520   4.3332   4.3372   4.3372   4.3418   4.4269
+     4.4548   4.4548   4.4740   4.5055   4.5055   4.5239   4.5430   4.5672
+     4.5672   4.6886   4.6984   4.7221   4.7256   4.7256   4.7264   4.7675
+     4.7675   4.7896   4.8023   4.8023   5.1467   5.3772   5.3772   5.4191
+     5.4528   6.5882   6.6332   6.6332   8.0207   9.0641   9.0651   9.0651
+     9.1558   9.1618   9.3142   9.3142   9.5519   9.7094   9.7515   9.8739
+     9.8867  10.0783  10.0783  10.0891  10.1015  10.1118  10.1118  10.1132
+    10.1382  10.2151  10.3121  10.3168  10.3168  10.3546  10.3690  10.4093
+    10.4093  10.4161  10.4806  10.4912  10.4912  10.6915  10.7700  10.7700
+    10.8052  11.0888  11.1030  11.1053  11.1147  11.1147  11.3914  11.6220
+    11.6230  11.6230  11.7602  11.8409  11.8661  11.9164  11.9165  11.9232
+    12.0662  12.0670  12.0677  12.0853
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     0.9932   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.0000-0.5000 (270152 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.2893  -7.2805  -6.8222  -6.8222
+    -6.8071  -6.8021  -6.7986  -6.7921  -6.7921  -6.7919  -6.5819  -6.5773
+    -6.5773  -6.5632  -6.5530  -6.5527  -6.5527  -6.5516  -6.4649  -6.4462
+    -6.3607  -6.3582  -6.3582  -6.3423  -6.3385  -6.3318  -6.3318  -6.3246
+    -6.2593  -6.2593  -6.2382  -6.2382  -0.6761  -0.6708  -0.6670  -0.6626
+    -0.6342  -0.6275  -0.6275  -0.6253  -0.6216  -0.6191  -0.6169  -0.6169
+    -0.6125  -0.6125  -0.6035  -0.6035  -0.5910  -0.5861  -0.5841  -0.5834
+    -0.5598  -0.5598  -0.5546  -0.5489  -0.5474  -0.5474  -0.5451  -0.5348
+    -0.5317  -0.5305  -0.5297  -0.5297  -0.5275  -0.5239  -0.5239  -0.5239
+    -0.5228  -0.5225  -0.5181  -0.5181  -0.5161  -0.5144  -0.5144  -0.5115
+    -0.5093  -0.5093  -0.5063  -0.5063  -0.5054  -0.5016  -0.5016  -0.5015
+    -0.4940  -0.4918  -0.4865  -0.4865  -0.4781  -0.4635  -0.4635  -0.4624
+    -0.4419  -0.4392  -0.4392  -0.4379  -0.4265  -0.4178  -0.4178  -0.3870
+    -0.3870  -0.3753  -0.3753  -0.3555  -0.3466  -0.3466  -0.3064  -0.3062
+    -0.3030  -0.3030  -0.2872  -0.2787  -0.2634  -0.2589  -0.2589  -0.2582
+    -0.2534  -0.2534  -0.2423  -0.2352  -0.2300  -0.2298  -0.2272  -0.2238
+    -0.2238  -0.2184  -0.2184  -0.2105  -0.2084  -0.2084  -0.2026  -0.2014
+    -0.1966  -0.1966  -0.1920  -0.1914  -0.1832  -0.1824  -0.1776  -0.1732
+    -0.1728  -0.1713  -0.1713  -0.1675  -0.1675  -0.1672  -0.1535  -0.1535
+    -0.1531  -0.1514  -0.1506  -0.1500  -0.1457  -0.1435  -0.1381  -0.1381
+    -0.1375  -0.1308  -0.1302  -0.1263  -0.1263  -0.1229  -0.1223  -0.1164
+    -0.1118  -0.1112  -0.1112  -0.1095  -0.1064  -0.1023  -0.1011  -0.1011
+    -0.0930  -0.0828  -0.0804  -0.0022  -0.0022   0.0186   0.0531   0.0620
+     0.0624   0.0624   0.0781   0.1004   0.1004   0.1333   0.1333   0.9583
+     0.9583   0.9898   1.0026   1.0057   1.0123   1.0123   1.0379   1.0511
+     1.0900   1.0964   1.1085   1.1480   1.1673   1.1673   1.1842   1.1915
+     1.1921   1.1921   1.4436   1.7237   1.7781   2.3188   2.3188   2.3969
+     2.4380   2.4851   2.4903   2.4903   2.6005   2.6021   2.6669   2.6669
+     2.6678   2.6871   2.6871   2.6886   2.6923   3.1003   3.1155   3.1314
+     3.1314   3.1687   3.1732   3.1732   3.1893   3.5036   3.5036   3.6055
+     3.6486   3.6923   3.6923   3.7480   3.7480   3.8686   3.8784   3.8784
+     3.8831   3.8915   3.9026   3.9026   3.9189   3.9205   3.9371   3.9371
+     3.9407   3.9417   3.9751   3.9946   3.9946   4.0185   4.0205   4.0205
+     4.0516   4.3262   4.4203   4.4672   4.4672   4.5109   4.6015   4.6688
+     4.6888   4.6888   4.6925   4.7035   4.7058   4.7083   4.7083   4.7220
+     4.7226   4.7261   4.7261   5.0653   5.0653   5.1837   5.1837   5.3944
+     5.4645   6.5469   6.6158   6.6158   8.7835   8.8003   9.3419   9.3872
+     9.5695   9.5695   9.5859   9.5865   9.5865   9.5952   9.6106   9.7125
+     9.8979   9.9022   9.9022   9.9560   9.9560   9.9724  10.2139  10.2139
+    10.2177  10.2361  10.2378  10.2378  10.2438  10.3195  10.3931  10.4086
+    10.4238  10.5651  10.7403  10.7403  10.7447  10.7693  10.7839  10.7902
+    10.7902  10.9401  10.9784  10.9964  10.9967  11.0150  11.0150  11.0820
+    11.0820  11.2251  11.3016  11.4145  11.8198  11.8295  11.8295  11.8381
+    11.8454  11.8464  11.8869  12.0766
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     0.8932   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.2500 0.2500 (269929 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.3586  -7.0834  -7.0806  -6.8668
+    -6.8500  -6.8448  -6.6958  -6.6937  -6.6839  -6.6823  -6.6498  -6.6462
+    -6.6065  -6.6032  -6.5392  -6.5333  -6.5069  -6.5057  -6.4594  -6.4558
+    -6.4532  -6.4529  -6.3729  -6.3132  -6.3113  -6.2887  -6.2879  -6.2853
+    -6.2792  -6.2651  -6.2595  -6.2440  -0.6719  -0.6692  -0.6636  -0.6603
+    -0.6580  -0.6512  -0.6507  -0.6403  -0.6379  -0.6378  -0.6320  -0.6192
+    -0.5811  -0.5785  -0.5775  -0.5721  -0.5692  -0.5674  -0.5608  -0.5592
+    -0.5559  -0.5528  -0.5521  -0.5504  -0.5477  -0.5448  -0.5446  -0.5396
+    -0.5374  -0.5366  -0.5356  -0.5341  -0.5337  -0.5310  -0.5301  -0.5288
+    -0.5270  -0.5252  -0.5242  -0.5223  -0.5210  -0.5197  -0.5193  -0.5153
+    -0.5143  -0.5087  -0.5076  -0.5041  -0.5017  -0.5004  -0.4959  -0.4889
+    -0.4857  -0.4848  -0.4798  -0.4726  -0.4601  -0.4587  -0.4561  -0.4490
+    -0.4472  -0.4420  -0.4326  -0.4307  -0.4256  -0.4242  -0.4167  -0.4059
+    -0.4025  -0.3940  -0.3739  -0.3666  -0.3625  -0.3544  -0.3482  -0.3482
+    -0.3366  -0.3257  -0.2980  -0.2807  -0.2790  -0.2711  -0.2671  -0.2602
+    -0.2582  -0.2547  -0.2476  -0.2455  -0.2317  -0.2288  -0.2240  -0.2179
+    -0.2167  -0.2158  -0.2116  -0.2089  -0.2022  -0.1946  -0.1935  -0.1932
+    -0.1918  -0.1917  -0.1901  -0.1862  -0.1786  -0.1767  -0.1725  -0.1725
+    -0.1700  -0.1693  -0.1675  -0.1653  -0.1633  -0.1611  -0.1573  -0.1563
+    -0.1540  -0.1509  -0.1486  -0.1457  -0.1447  -0.1411  -0.1394  -0.1382
+    -0.1379  -0.1354  -0.1346  -0.1281  -0.1223  -0.1215  -0.1176  -0.1173
+    -0.1151  -0.1136  -0.1066  -0.1048  -0.0999  -0.0969  -0.0929  -0.0803
+    -0.0716  -0.0533  -0.0526  -0.0254  -0.0218   0.0083   0.0300   0.0368
+     0.0671   0.1103   0.1152   0.1393   0.1409   0.1663   0.1725   0.5304
+     0.5550   0.9223   0.9296   1.0302   1.0484   1.0628   1.0887   1.0951
+     1.1370   1.1402   1.1547   1.1569   1.1744   1.1754   1.2441   1.2564
+     1.4111   1.6160   1.7005   1.7571   1.7860   1.8241   1.9090   2.2164
+     2.2220   2.4681   2.5614   2.5819   2.6489   2.6562   2.6774   2.7037
+     2.7561   2.8572   2.8704   2.9982   3.0413   3.0726   3.0980   3.1241
+     3.1469   3.1906   3.2714   3.3011   3.3323   3.3694   3.3763   3.4018
+     3.4284   3.4542   3.4660   3.5159   3.5196   3.5278   3.5287   3.6575
+     3.7139   3.7549   3.7800   3.8003   3.8707   3.9126   3.9479   4.0136
+     4.0859   4.1376   4.1980   4.2001   4.2636   4.2863   4.3142   4.3321
+     4.3765   4.3811   4.3890   4.3931   4.4288   4.4288   4.5226   4.5517
+     4.6014   4.6036   4.6469   4.6495   4.6670   4.6970   4.7593   4.7612
+     4.7791   4.7874   4.9190   4.9247   5.0162   5.2791   5.3790   5.4333
+     5.4883   6.5737   6.6131   6.6386   8.2754   9.0886   9.1268   9.3733
+     9.3827   9.3877   9.4157   9.4418   9.5775   9.6112   9.9321   9.9333
+     9.9406   9.9451   9.9531   9.9625   9.9893  10.0054  10.0074  10.0139
+    10.0848  10.1729  10.1997  10.2175  10.2618  10.3376  10.3427  10.3573
+    10.3939  10.4382  10.5406  10.7110  10.7244  10.7510  10.8337  10.8448
+    10.8684  10.9120  10.9427  11.0319  11.0536  11.0992  11.3356  11.4717
+    11.4840  11.5003  11.5527  11.5545  11.7188  11.8336  11.8453  11.8614
+    11.8839  11.9075  11.9719  11.9777
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     0.1110   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000 0.2500-0.5000 (269962 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.2548  -7.2458  -7.0005  -6.9894
+    -6.7986  -6.7848  -6.7785  -6.7784  -6.6653  -6.6576  -6.6464  -6.6456
+    -6.6086  -6.5946  -6.4937  -6.4833  -6.4703  -6.4684  -6.4518  -6.4367
+    -6.3927  -6.3799  -6.3658  -6.3649  -6.3519  -6.3480  -6.3122  -6.3013
+    -6.2958  -6.2878  -6.2599  -6.2464  -0.6607  -0.6573  -0.6534  -0.6478
+    -0.6323  -0.6322  -0.6188  -0.6162  -0.6155  -0.6153  -0.6110  -0.6083
+    -0.6073  -0.6031  -0.6010  -0.5962  -0.5884  -0.5859  -0.5822  -0.5785
+    -0.5724  -0.5713  -0.5680  -0.5591  -0.5573  -0.5568  -0.5544  -0.5472
+    -0.5462  -0.5397  -0.5395  -0.5373  -0.5325  -0.5322  -0.5311  -0.5297
+    -0.5294  -0.5275  -0.5241  -0.5215  -0.5208  -0.5185  -0.5162  -0.5138
+    -0.5130  -0.5123  -0.5053  -0.5040  -0.4977  -0.4921  -0.4914  -0.4875
+    -0.4843  -0.4818  -0.4752  -0.4752  -0.4632  -0.4610  -0.4501  -0.4481
+    -0.4386  -0.4344  -0.4328  -0.4314  -0.4175  -0.4117  -0.4010  -0.3988
+    -0.3910  -0.3898  -0.3831  -0.3755  -0.3752  -0.3703  -0.3667  -0.3647
+    -0.3630  -0.3363  -0.3178  -0.3108  -0.3057  -0.2963  -0.2869  -0.2772
+    -0.2505  -0.2379  -0.2326  -0.2300  -0.2294  -0.2276  -0.2239  -0.2159
+    -0.2149  -0.2137  -0.2093  -0.2031  -0.1973  -0.1961  -0.1951  -0.1950
+    -0.1910  -0.1869  -0.1858  -0.1784  -0.1751  -0.1737  -0.1736  -0.1692
+    -0.1679  -0.1654  -0.1620  -0.1615  -0.1571  -0.1518  -0.1517  -0.1507
+    -0.1490  -0.1484  -0.1459  -0.1443  -0.1394  -0.1388  -0.1375  -0.1355
+    -0.1334  -0.1302  -0.1295  -0.1287  -0.1257  -0.1214  -0.1212  -0.1161
+    -0.1158  -0.1147  -0.1139  -0.1071  -0.1061  -0.1008  -0.0952  -0.0696
+    -0.0465  -0.0130  -0.0074  -0.0040   0.0046   0.0198   0.0349   0.0537
+     0.0663   0.0796   0.0855   0.0977   0.1301   0.1306   0.1481   0.7788
+     0.7888   0.7951   0.8091   1.0185   1.0237   1.0261   1.0350   1.0659
+     1.0669   1.0892   1.1311   1.2395   1.2486   1.3178   1.3284   1.3520
+     1.3698   1.3744   1.4717   1.6765   1.7260   1.9864   1.9876   2.1422
+     2.2220   2.2561   2.2934   2.4842   2.5341   2.7600   2.7874   2.8145
+     2.8550   2.8630   2.8922   2.9350   2.9379   2.9841   2.9859   3.1087
+     3.1475   3.2998   3.3501   3.4096   3.4699   3.4892   3.5260   3.5495
+     3.5664   3.5846   3.5949   3.6108   3.6751   3.6937   3.6972   3.7565
+     3.7828   3.8327   3.8482   3.8660   3.9122   3.9269   3.9383   3.9962
+     4.0307   4.0807   4.1095   4.1481   4.1831   4.1867   4.1925   4.2001
+     4.2404   4.2574   4.2964   4.3094   4.3451   4.3902   4.4157   4.4230
+     4.4654   4.5444   4.5634   4.6136   4.6340   4.6635   4.7033   4.7283
+     4.7441   4.9644   5.0357   5.0606   5.0635   5.1896   5.2995   5.4172
+     5.4804   6.5815   6.5947   6.6187   8.8806   8.8986   9.4608   9.4677
+     9.4795   9.5210   9.5783   9.6307   9.7101   9.7126   9.7456   9.7549
+     9.9157   9.9170   9.9266   9.9344   9.9386   9.9440   9.9497   9.9864
+    10.0216  10.0446  10.0682  10.1270  10.1622  10.2534  10.4358  10.4607
+    10.5092  10.5817  10.5819  10.6000  10.6772  10.6958  10.7367  10.8001
+    10.8370  10.9006  10.9769  11.0931  11.1406  11.2279  11.3521  11.3577
+    11.3975  11.4207  11.4416  11.4432  11.4563  11.5594  11.6161  11.6385
+    11.6504  11.7218  11.8360  11.8535
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     0.3449   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.0000-0.5000-0.5000 (269920 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.1580  -7.1517  -7.1517  -7.1384
+    -6.7567  -6.7353  -6.7353  -6.7336  -6.7285  -6.7285  -6.7179  -6.7178
+    -6.4606  -6.4606  -6.4296  -6.4186  -6.4177  -6.4163  -6.4142  -6.4142
+    -6.4062  -6.4062  -6.4015  -6.4012  -6.3989  -6.3983  -6.3830  -6.3830
+    -6.2910  -6.2726  -6.2726  -6.2601  -0.6457  -0.6411  -0.6380  -0.6380
+    -0.6171  -0.6121  -0.6060  -0.6060  -0.6040  -0.6040  -0.5991  -0.5967
+    -0.5967  -0.5939  -0.5918  -0.5918  -0.5899  -0.5880  -0.5873  -0.5851
+    -0.5846  -0.5846  -0.5808  -0.5798  -0.5798  -0.5723  -0.5624  -0.5604
+    -0.5604  -0.5569  -0.5518  -0.5497  -0.5489  -0.5374  -0.5374  -0.5305
+    -0.5305  -0.5277  -0.5268  -0.5225  -0.5180  -0.5180  -0.5164  -0.5148
+    -0.5121  -0.5041  -0.5027  -0.5027  -0.4807  -0.4774  -0.4751  -0.4751
+    -0.4691  -0.4672  -0.4645  -0.4645  -0.4608  -0.4595  -0.4589  -0.4589
+    -0.4489  -0.4479  -0.4339  -0.4323  -0.4323  -0.4242  -0.4242  -0.4122
+    -0.4107  -0.4084  -0.4084  -0.3905  -0.3819  -0.3766  -0.3766  -0.3559
+    -0.3516  -0.3493  -0.3398  -0.3394  -0.3394  -0.3025  -0.2811  -0.2811
+    -0.2653  -0.2528  -0.2377  -0.2377  -0.2257  -0.2257  -0.2236  -0.2143
+    -0.2091  -0.2083  -0.2083  -0.2010  -0.1934  -0.1918  -0.1918  -0.1865
+    -0.1853  -0.1832  -0.1831  -0.1831  -0.1781  -0.1713  -0.1632  -0.1632
+    -0.1572  -0.1536  -0.1536  -0.1530  -0.1493  -0.1489  -0.1480  -0.1480
+    -0.1445  -0.1445  -0.1415  -0.1415  -0.1402  -0.1365  -0.1364  -0.1364
+    -0.1346  -0.1322  -0.1251  -0.1188  -0.1188  -0.1184  -0.1153  -0.1153
+    -0.1146  -0.1032  -0.1032  -0.1020  -0.0996  -0.0949  -0.0779  -0.0700
+    -0.0686  -0.0631  -0.0631   0.0288   0.0288   0.0422   0.0815   0.0907
+     0.0938   0.0954   0.0954   0.1228   0.1510   0.1510   0.1706   0.7963
+     0.8035   0.8057   0.8057   0.8130   0.8130   0.8151   0.8749   1.0481
+     1.0481   1.0660   1.1274   1.4799   1.4799   1.4966   1.5588   1.5684
+     1.5684   1.5777   1.6579   1.6763   1.7675   1.7675   1.8095   1.8101
+     1.8101   1.8183   2.0120   2.4866   2.5643   2.5643   2.5703   3.0904
+     3.0904   3.0990   3.1412   3.2089   3.2766   3.2820   3.2820   3.2955
+     3.2969   3.3013   3.3013   3.3051   3.3051   3.3066   3.3499   3.4627
+     3.4627   3.6123   3.6596   3.6616   3.6887   3.6887   3.6978   3.7045
+     3.7181   3.7272   3.7272   3.8061   3.8061   3.8107   3.8259   3.8587
+     4.0742   4.0901   4.1034   4.1034   4.1663   4.1663   4.1671   4.3148
+     4.3148   4.3167   4.3587   4.4701   4.4701   4.4846   4.4857   4.4976
+     4.5011   4.5011   4.5421   4.5510   4.5510   4.5518   4.5518   4.6420
+     4.7504   4.7504   4.7575   5.1882   5.2176   5.2176   5.3710   5.3946
+     5.5548   6.5695   6.6199   6.6199   9.1928   9.1928   9.2086   9.2410
+     9.5874   9.6009   9.6009   9.6010   9.6075   9.6075   9.6197   9.6985
+     9.7293   9.7293   9.8129   9.8790  10.2028  10.2040  10.2138  10.2169
+    10.2169  10.2358  10.2824  10.2824  10.3432  10.3648  10.3648  10.3710
+    10.3736  10.4178  10.4178  10.4404  10.5086  10.5086  10.5178  10.5178
+    10.5218  10.5238  10.5670  11.0777  11.4819  11.4819  11.5131  11.5571
+    11.5596  11.5599  11.5678  11.5678  11.5960  11.5993  11.6076  11.6076
+    11.6911  11.7081  11.7081  11.7520
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2500 0.2500 0.2500 (269935 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.3222  -7.0543  -7.0543  -7.0505
+    -6.8421  -6.8421  -6.8407  -6.7019  -6.6371  -6.6349  -6.6349  -6.5447
+    -6.5447  -6.5296  -6.5249  -6.5248  -6.5248  -6.5045  -6.5045  -6.5035
+    -6.3924  -6.3874  -6.3874  -6.3146  -6.3146  -6.3117  -6.2930  -6.2930
+    -6.2930  -6.2838  -6.2838  -6.2833  -0.6582  -0.6582  -0.6556  -0.6473
+    -0.6448  -0.6445  -0.6445  -0.6301  -0.6301  -0.6246  -0.6207  -0.6207
+    -0.5812  -0.5812  -0.5806  -0.5724  -0.5724  -0.5720  -0.5681  -0.5681
+    -0.5676  -0.5617  -0.5617  -0.5536  -0.5536  -0.5516  -0.5455  -0.5455
+    -0.5453  -0.5423  -0.5416  -0.5416  -0.5389  -0.5389  -0.5383  -0.5362
+    -0.5321  -0.5284  -0.5284  -0.5248  -0.5236  -0.5236  -0.5205  -0.5205
+    -0.5173  -0.5132  -0.5132  -0.5104  -0.4991  -0.4991  -0.4962  -0.4880
+    -0.4880  -0.4822  -0.4822  -0.4587  -0.4575  -0.4494  -0.4492  -0.4492
+    -0.4378  -0.4378  -0.4250  -0.4228  -0.4228  -0.4106  -0.4072  -0.4072
+    -0.3869  -0.3795  -0.3795  -0.3561  -0.3534  -0.3532  -0.3532  -0.3503
+    -0.3473  -0.3473  -0.3354  -0.3354  -0.3346  -0.2781  -0.2781  -0.2693
+    -0.2667  -0.2657  -0.2657  -0.2432  -0.2340  -0.2340  -0.2191  -0.2191
+    -0.2136  -0.2126  -0.2126  -0.2107  -0.1989  -0.1934  -0.1934  -0.1882
+    -0.1882  -0.1822  -0.1794  -0.1782  -0.1782  -0.1705  -0.1705  -0.1670
+    -0.1650  -0.1650  -0.1636  -0.1573  -0.1573  -0.1538  -0.1535  -0.1535
+    -0.1452  -0.1452  -0.1434  -0.1425  -0.1395  -0.1395  -0.1372  -0.1372
+    -0.1367  -0.1309  -0.1274  -0.1236  -0.1236  -0.1168  -0.1168  -0.1092
+    -0.1092  -0.1083  -0.1042  -0.1000  -0.1000  -0.0957  -0.0934  -0.0934
+    -0.0410  -0.0375  -0.0375   0.0010   0.0037   0.0037   0.0368   0.0402
+     0.0402   0.1055   0.1055   0.1249   0.1266   0.1266   0.1274   0.6946
+     0.6946   0.7328   0.9823   0.9823   0.9951   1.0752   1.0752   1.0937
+     1.0948   1.0948   1.1877   1.2333   1.2333   1.2923   1.3127   1.4081
+     1.4081   1.4662   1.4702   1.4702   1.6332   2.0673   2.0853   2.0853
+     2.2228   2.2228   2.3300   2.7026   2.7026   2.7690   2.7690   2.7835
+     2.7867   2.8621   2.8621   2.9165   3.0767   3.0767   3.1135   3.1592
+     3.1592   3.2925   3.3345   3.3345   3.3913   3.4129   3.4181   3.4181
+     3.5118   3.5252   3.5252   3.5537   3.5537   3.5692   3.5914   3.5914
+     3.5940   3.7761   3.7771   3.7771   3.9324   3.9832   3.9832   4.0679
+     4.0742   4.0742   4.1785   4.1785   4.1859   4.2232   4.2232   4.2736
+     4.2882   4.2916   4.2916   4.3316   4.3316   4.3431   4.4334   4.4334
+     4.4531   4.5053   4.6715   4.6715   4.7843   4.7949   4.7949   4.8089
+     4.8674   4.8674   4.9829   4.9829   5.0615   5.3207   5.3207   5.4660
+     5.4660   6.5590   6.6358   6.6358   8.4399   8.9428   9.4472   9.4472
+     9.4508   9.5144   9.5144   9.5286   9.5410   9.5410   9.5947   9.6591
+     9.6591   9.7355   9.9272   9.9272   9.9605  10.1503  10.1503  10.1920
+    10.2266  10.2266  10.2638  10.3765  10.3835  10.3835  10.3922  10.3922
+    10.4442  10.4443  10.4460  10.4460  10.4824  10.4824  10.5049  10.5555
+    10.5555  10.9348  11.1612  11.1612  11.2357  11.4750  11.4830  11.4830
+    11.5072  11.5072  11.5797  11.5808  11.5808  11.5846  11.6471  11.6471
+    11.7797  11.8962  11.9685  11.9689
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.8620
+     0.8620   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2500 0.2500-0.5000 (269988 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.2213  -7.2121  -6.9772  -6.9771
+    -6.9632  -6.9593  -6.7919  -6.7782  -6.6058  -6.5999  -6.5841  -6.5812
+    -6.5335  -6.5314  -6.5099  -6.5096  -6.4601  -6.4424  -6.4308  -6.4260
+    -6.3984  -6.3959  -6.3834  -6.3756  -6.3460  -6.3372  -6.3251  -6.3184
+    -6.3061  -6.3054  -6.2865  -6.2864  -0.6525  -0.6483  -0.6358  -0.6320
+    -0.6253  -0.6215  -0.6210  -0.6153  -0.6117  -0.6108  -0.6080  -0.6050
+    -0.5992  -0.5973  -0.5955  -0.5902  -0.5835  -0.5824  -0.5809  -0.5785
+    -0.5739  -0.5724  -0.5699  -0.5684  -0.5667  -0.5640  -0.5614  -0.5598
+    -0.5547  -0.5515  -0.5512  -0.5463  -0.5456  -0.5429  -0.5413  -0.5393
+    -0.5359  -0.5334  -0.5321  -0.5305  -0.5262  -0.5257  -0.5218  -0.5191
+    -0.5168  -0.5131  -0.5049  -0.4981  -0.4875  -0.4859  -0.4800  -0.4774
+    -0.4773  -0.4756  -0.4726  -0.4652  -0.4578  -0.4493  -0.4458  -0.4445
+    -0.4370  -0.4313  -0.4271  -0.4228  -0.4178  -0.4159  -0.4101  -0.4094
+    -0.4003  -0.3959  -0.3927  -0.3889  -0.3810  -0.3729  -0.3711  -0.3395
+    -0.3382  -0.3154  -0.3104  -0.3047  -0.3010  -0.2964  -0.2941  -0.2910
+    -0.2857  -0.2838  -0.2800  -0.2551  -0.2528  -0.2413  -0.2366  -0.2354
+    -0.2167  -0.2100  -0.2096  -0.2010  -0.1966  -0.1943  -0.1902  -0.1847
+    -0.1843  -0.1778  -0.1764  -0.1737  -0.1729  -0.1717  -0.1680  -0.1659
+    -0.1593  -0.1583  -0.1574  -0.1568  -0.1557  -0.1484  -0.1467  -0.1457
+    -0.1417  -0.1405  -0.1397  -0.1369  -0.1353  -0.1342  -0.1302  -0.1292
+    -0.1265  -0.1261  -0.1252  -0.1226  -0.1202  -0.1183  -0.1156  -0.1154
+    -0.1140  -0.1045  -0.1015  -0.1007  -0.0977  -0.0925  -0.0849  -0.0720
+    -0.0639  -0.0448  -0.0293   0.0084   0.0094   0.0201   0.0397   0.0661
+     0.0723   0.0770   0.0793   0.0896   0.1133   0.1261   0.1316   0.7263
+     0.7406   0.9642   0.9834   0.9856   1.0082   1.0188   1.0627   1.0694
+     1.0908   1.1546   1.1739   1.1855   1.1872   1.2018   1.2110   1.2272
+     1.3720   1.6013   1.6441   1.6811   1.7666   1.7755   1.8143   1.8167
+     1.9407   2.5579   2.6549   2.7086   2.7384   2.7671   2.7737   2.7766
+     2.8074   2.8800   2.8946   2.9197   2.9315   3.0119   3.0482   3.0522
+     3.0560   3.3392   3.3639   3.4330   3.4557   3.4569   3.5339   3.5755
+     3.5853   3.6265   3.6665   3.6826   3.6885   3.7028   3.7452   3.7615
+     3.7770   3.7997   3.8009   3.8337   3.8572   3.8830   3.8842   3.8921
+     3.8958   3.9251   3.9544   3.9572   3.9675   4.1191   4.1481   4.1697
+     4.2011   4.2675   4.2850   4.3240   4.3765   4.3775   4.4010   4.4898
+     4.5249   4.5415   4.5591   4.5725   4.6203   4.7403   4.9049   4.9551
+     4.9981   5.0357   5.0659   5.0844   5.1608   5.1725   5.2405   5.4480
+     5.4646   6.5924   6.6082   6.6337   8.9021   8.9208   9.1727   9.2015
+     9.4859   9.4915   9.4940   9.5444   9.6350   9.6871   9.7973   9.8036
+     9.8148   9.8206   9.8903   9.9021   9.9051   9.9333   9.9606  10.0172
+    10.1099  10.1177  10.1251  10.1306  10.1750  10.1841  10.2012  10.3094
+    10.3562  10.4130  10.5208  10.5375  10.5378  10.7234  10.8666  10.8740
+    10.8877  10.9932  11.1040  11.1117  11.1327  11.2449  11.4434  11.4582
+    11.4614  11.5560  11.6376  11.6421  11.7285  11.7316  11.7342  11.7575
+    11.7747  11.7843  11.7908  11.8078
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.9985
+     0.8923   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k = 0.2500-0.5000-0.5000 (269956 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.1278  -7.1210  -7.1210  -7.1078
+    -6.9071  -6.8964  -6.8964  -6.8825  -6.5797  -6.5631  -6.5631  -6.5482
+    -6.4592  -6.4592  -6.4281  -6.4164  -6.4156  -6.4145  -6.4128  -6.4128
+    -6.4071  -6.4071  -6.4038  -6.4033  -6.4006  -6.3996  -6.3841  -6.3841
+    -6.3251  -6.3081  -6.3081  -6.2957  -0.6354  -0.6304  -0.6297  -0.6297
+    -0.6125  -0.6067  -0.6046  -0.6046  -0.5993  -0.5976  -0.5976  -0.5953
+    -0.5933  -0.5933  -0.5901  -0.5901  -0.5882  -0.5840  -0.5840  -0.5826
+    -0.5801  -0.5793  -0.5764  -0.5764  -0.5757  -0.5727  -0.5701  -0.5622
+    -0.5622  -0.5611  -0.5606  -0.5556  -0.5545  -0.5545  -0.5519  -0.5477
+    -0.5415  -0.5412  -0.5412  -0.5338  -0.5335  -0.5335  -0.5315  -0.5281
+    -0.5265  -0.5148  -0.5148  -0.5139  -0.4890  -0.4794  -0.4791  -0.4791
+    -0.4621  -0.4522  -0.4522  -0.4521  -0.4512  -0.4461  -0.4391  -0.4387
+    -0.4387  -0.4204  -0.4204  -0.4136  -0.4136  -0.4115  -0.4109  -0.4022
+    -0.3940  -0.3887  -0.3887  -0.3865  -0.3723  -0.3723  -0.3717  -0.3548
+    -0.3499  -0.3496  -0.3403  -0.3403  -0.3395  -0.3017  -0.2952  -0.2952
+    -0.2783  -0.2736  -0.2711  -0.2711  -0.2596  -0.2596  -0.2587  -0.2495
+    -0.2443  -0.2038  -0.2000  -0.2000  -0.1962  -0.1902  -0.1902  -0.1821
+    -0.1777  -0.1766  -0.1752  -0.1752  -0.1731  -0.1663  -0.1659  -0.1659
+    -0.1540  -0.1535  -0.1535  -0.1492  -0.1492  -0.1474  -0.1410  -0.1385
+    -0.1355  -0.1349  -0.1349  -0.1301  -0.1301  -0.1269  -0.1264  -0.1235
+    -0.1204  -0.1201  -0.1201  -0.1168  -0.1168  -0.1121  -0.1121  -0.1109
+    -0.1107  -0.0980  -0.0948  -0.0931  -0.0931  -0.0798  -0.0630  -0.0550
+    -0.0537  -0.0474  -0.0474   0.0091   0.0091   0.0256   0.0449   0.0514
+     0.0560   0.0594   0.0594   0.0798   0.1026   0.1026   0.1202   0.9074
+     0.9074   0.9095   0.9267   0.9315   0.9324   0.9324   0.9710   1.0707
+     1.0707   1.0816   1.1158   1.3735   1.3735   1.3898   1.3996   1.4435
+     1.4435   1.4518   1.4597   1.4597   1.4629   1.4633   1.6809   2.2183
+     2.2183   2.2410   2.2893   2.6684   2.7508   2.7508   2.7685   3.0368
+     3.0368   3.0579   3.0795   3.2010   3.2546   3.2591   3.2591   3.2706
+     3.2714   3.2714   3.2812   3.2828   3.2828   3.2869   3.3003   3.3123
+     3.3123   3.3296   3.3965   3.6764   3.7022   3.7022   3.7400   3.7999
+     3.8223   3.8404   3.8404   3.8538   3.8600   3.8600   3.8703   3.8703
+     3.8724   3.8763   3.8798   4.0340   4.0790   4.0858   4.0858   4.1049
+     4.1387   4.1387   4.1416   4.2125   4.2125   4.2420   4.2614   4.6211
+     4.6655   4.6655   4.7904   4.8228   4.8466   4.9142   4.9142   4.9476
+     4.9476   4.9501   4.9645   5.1615   5.1976   5.1976   5.3032   5.4244
+     5.5139   6.6084   6.6335   6.6335   9.0772   9.0772   9.0875   9.1118
+     9.1946   9.1946   9.1957   9.2888   9.7836   9.7836   9.8289   9.8396
+     9.9020   9.9020   9.9399   9.9514   9.9596   9.9643   9.9643   9.9830
+     9.9860  10.0080  10.0080  10.0449  10.1423  10.1424  10.1424  10.1487
+    10.1539  10.1973  10.1973  10.4649  10.9591  10.9591  10.9598  10.9647
+    10.9748  10.9940  10.9940  11.1704  11.4898  11.4898  11.5141  11.5525
+    11.5735  11.5735  11.6124  11.6341  11.6891  11.6909  11.6927  11.6929
+    11.7029  11.7456  11.7458  11.8647
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     0.0001   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+          k =-0.5000-0.5000-0.5000 (269968 PWs)   bands (ev):
+
+   -88.0515 -51.3764 -51.3764 -51.3764  -7.0450  -7.0392  -7.0392  -7.0392
+    -7.0253  -7.0253  -7.0253  -7.0087  -6.4680  -6.4680  -6.4680  -6.4132
+    -6.4125  -6.4125  -6.4125  -6.4123  -6.4123  -6.4112  -6.4112  -6.4112
+    -6.4082  -6.4082  -6.4082  -6.4074  -6.4074  -6.4070  -6.4070  -6.4070
+    -6.3974  -6.3805  -6.3805  -6.3805  -0.6118  -0.6118  -0.6118  -0.6017
+    -0.6017  -0.6017  -0.6016  -0.6016  -0.6016  -0.5989  -0.5973  -0.5960
+    -0.5960  -0.5916  -0.5916  -0.5916  -0.5914  -0.5914  -0.5914  -0.5871
+    -0.5871  -0.5737  -0.5737  -0.5737  -0.5688  -0.5688  -0.5688  -0.5664
+    -0.5664  -0.5664  -0.5659  -0.5659  -0.5659  -0.5618  -0.5618  -0.5618
+    -0.5539  -0.5510  -0.5508  -0.5508  -0.5508  -0.5456  -0.5456  -0.5411
+    -0.5411  -0.5220  -0.5220  -0.5220  -0.4609  -0.4538  -0.4538  -0.4538
+    -0.4396  -0.4396  -0.4396  -0.4358  -0.4358  -0.4298  -0.4298  -0.4298
+    -0.4262  -0.4262  -0.4259  -0.4259  -0.4259  -0.4188  -0.4188  -0.4188
+    -0.4180  -0.3762  -0.3762  -0.3762  -0.3262  -0.3258  -0.3258  -0.3258
+    -0.3243  -0.3243  -0.3243  -0.3213  -0.3213  -0.3213  -0.3173  -0.3173
+    -0.3173  -0.3109  -0.3109  -0.3047  -0.3047  -0.3047  -0.3025  -0.3025
+    -0.2955  -0.1930  -0.1930  -0.1930  -0.1889  -0.1889  -0.1889  -0.1851
+    -0.1851  -0.1745  -0.1745  -0.1745  -0.1713  -0.1713  -0.1713  -0.1578
+    -0.1507  -0.1507  -0.1507  -0.1467  -0.1467  -0.1467  -0.1419  -0.1419
+    -0.1227  -0.1227  -0.1227  -0.1220  -0.1220  -0.1220  -0.1216  -0.1216
+    -0.1216  -0.1146  -0.1146  -0.1146  -0.1112  -0.1000  -0.1000  -0.1000
+    -0.0967  -0.0967  -0.0310  -0.0310  -0.0174  -0.0174  -0.0174  -0.0128
+    -0.0128  -0.0128  -0.0093  -0.0093  -0.0093  -0.0087  -0.0052  -0.0052
+    -0.0045  -0.0045  -0.0045   0.0087   0.0087   0.0087   0.0133   1.1019
+     1.1019   1.1019   1.1380   1.1380   1.1738   1.1738   1.1738   1.1855
+     1.1855   1.1855   1.2003   1.2003   1.2003   1.2007   1.2007   1.2026
+     1.2026   1.2026   1.2032   1.2032   1.2032   1.2178   1.5815   2.6010
+     2.6010   2.6010   2.8001   2.8017   2.8017   2.8017   2.8788   3.0006
+     3.0006   3.1191   3.1191   3.1191   3.2357   3.2357   3.2357   3.2538
+     3.2538   3.2538   3.2562   3.2562   3.2562   3.2571   3.2591   3.2591
+     3.2591   3.2646   3.2646   3.2675   3.2675   3.2675   3.3721   3.7965
+     3.7965   3.7965   3.9384   3.9384   3.9919   3.9919   3.9919   4.0274
+     4.0302   4.0302   4.0302   4.0337   4.0337   4.0337   4.0350   4.0357
+     4.0357   4.0439   4.0439   4.0439   4.0450   4.0450   4.0450   4.7424
+     4.7424   4.7424   4.9363   4.9363   5.1079   5.1079   5.1079   5.1212
+     5.1212   5.1212   5.1224   5.1224   5.1341   5.1341   5.1341   5.4644
+     5.4644   6.6493   6.6493   6.6493   8.9807   8.9807   8.9807   8.9912
+     8.9912   8.9912   8.9914   9.1315   9.8918   9.8918   9.8918   9.8959
+     9.8959   9.8959   9.9076   9.9076   9.9101   9.9101   9.9101   9.9104
+     9.9104   9.9104   9.9121   9.9121   9.9121   9.9139   9.9737   9.9737
+    10.0131  10.0131  10.0131  10.3671  11.4775  11.4775  11.4775  11.4944
+    11.4944  11.4951  11.4951  11.4951  11.5092  11.5092  11.5092  11.5127
+    11.5127  11.5127  11.5139  11.5139  11.5139  11.5153  11.5153  11.5163
+    11.6096  11.6096  11.6096  12.1097
+
+     occupation numbers 
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000
+     1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   1.0000   0.8965
+     0.8965   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000   0.0000
+     0.0000   0.0000   0.0000   0.0000
+
+     the Fermi energy is     5.4765 ev
+
+!    total energy              =  -10057.68355293 Ry
+     total all-electron energy =   -139695.405464 Ry
+     estimated scf accuracy    <          8.2E-09 Ry
+     smearing contrib. (-TS)   =      -0.00022078 Ry
+     internal energy E=F+TS    =  -10057.68333215 Ry
+
+     The total energy is F=E-TS. E is the sum of the following terms:
+     one-electron contribution =   -2925.00398846 Ry
+     hartree contribution      =    2035.16418299 Ry
+     xc contribution           =   -1657.19716451 Ry
+     ewald contribution        =   -2988.82110911 Ry
+     one-center paw contrib.   =   -4521.82525307 Ry
+      -> PAW hartree energy AE =     123.13290974 Ry
+      -> PAW hartree energy PS =    -122.49095249 Ry
+      -> PAW xc energy AE      =    -143.19746615 Ry
+      -> PAW xc energy PS      =      47.13630432 Ry
+      -> total E_H with PAW    =    2035.80614024 Ry
+      -> total E_XC with PAW   =   -1753.25832634 Ry
+
+     total magnetization       =     3.00 Bohr mag/cell
+     absolute magnetization    =     3.29 Bohr mag/cell
+
+     convergence has been achieved in  24 iterations
+
+     Writing all to output data dir ./out/Co_qp1_unrlxd.save/
+ 
+     init_run     :      5.10s CPU      5.67s WALL (       1 calls)
+     electrons    :    210.33s CPU    214.65s WALL (       1 calls)
+
+     Called by init_run:
+     wfcinit      :      2.86s CPU      3.04s WALL (       1 calls)
+     wfcinit:atom :      0.03s CPU      0.03s WALL (       2 calls)
+     wfcinit:wfcr :      2.71s CPU      2.85s WALL (       2 calls)
+     potinit      :      0.57s CPU      0.68s WALL (       1 calls)
+     hinit0       :      0.39s CPU      0.48s WALL (       1 calls)
+
+     Called by electrons:
+     c_bands      :    182.39s CPU    185.99s WALL (      25 calls)
+     sum_band     :     22.23s CPU     22.62s WALL (      25 calls)
+     v_of_rho     :      1.77s CPU      1.86s WALL (      25 calls)
+     v_h          :      0.08s CPU      0.08s WALL (      25 calls)
+     v_xc         :      1.69s CPU      1.77s WALL (      25 calls)
+     newd         :      0.69s CPU      0.73s WALL (      25 calls)
+     PAW_pot      :      2.38s CPU      2.42s WALL (      25 calls)
+     mix_rho      :      0.70s CPU      0.75s WALL (      25 calls)
+
+     Called by c_bands:
+     init_us_2    :      2.89s CPU      2.92s WALL (     102 calls)
+     init_us_2:cp :      2.89s CPU      2.92s WALL (     102 calls)
+     cegterg      :    161.47s CPU    164.77s WALL (      50 calls)
+
+     Called by sum_band:
+     sum_band:wei :      0.13s CPU      0.14s WALL (      25 calls)
+     sum_band:loo :     19.38s CPU     19.68s WALL (      25 calls)
+     sum_band:buf :      0.42s CPU      0.46s WALL (      50 calls)
+     sum_band:ini :      1.42s CPU      1.43s WALL (      50 calls)
+     sum_band:cal :      7.24s CPU      7.33s WALL (      50 calls)
+     sum_band:bec :      0.21s CPU      0.21s WALL (      50 calls)
+     addusdens    :      1.00s CPU      1.03s WALL (      25 calls)
+                                        0.00s GPU  (      25 calls)
+     addusd:skk   :      0.02s CPU      0.02s WALL (      75 calls)
+                                        0.00s GPU  (      75 calls)
+
+     Called by *egterg:
+     cdiaghg      :     14.97s CPU     15.08s WALL (     279 calls)
+     cegterg:over :     11.33s CPU     11.47s WALL (     231 calls)
+     cegterg:upda :     11.76s CPU     11.96s WALL (     231 calls)
+     cegterg:last :     18.47s CPU     18.59s WALL (      92 calls)
+     cdiaghg:chol :      0.92s CPU      0.93s WALL (     279 calls)
+     cdiaghg:inve :      1.27s CPU      1.29s WALL (     279 calls)
+     cdiaghg:para :      2.18s CPU      2.20s WALL (     558 calls)
+     h_psi        :     83.31s CPU     85.19s WALL (     283 calls)
+     s_psi        :     18.31s CPU     18.56s WALL (     283 calls)
+     g_psi        :      0.41s CPU      0.41s WALL (     231 calls)
+
+     Called by h_psi:
+     h_psi:calbec :     18.44s CPU     18.67s WALL (     283 calls)
+     vloc_psi     :     45.16s CPU     45.81s WALL (     283 calls)
+     add_vuspsi   :     19.02s CPU     19.45s WALL (     283 calls)
+
+     General routines
+     calbec       :     25.68s CPU     26.00s WALL (     333 calls)
+     fft          :      1.24s CPU      1.42s WALL (     525 calls)
+     ffts         :      0.11s CPU      0.12s WALL (      50 calls)
+     fftw         :     51.10s CPU     51.85s WALL (   94624 calls)
+ 
+     Parallel routines
+
+     PAW routines
+     PAW_pot      :      2.38s CPU      2.42s WALL (      25 calls)
+     PAW_symme    :      0.08s CPU      0.09s WALL (      50 calls)
+ 
+     PWSCF        :   3m41.01s CPU   3m47.98s WALL
+
+ 
+   This run was terminated on:  18:24:24   6Jul2024            
+
+=------------------------------------------------------------------------------=
+   JOB DONE.
+=------------------------------------------------------------------------------=
