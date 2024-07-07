@@ -4,7 +4,7 @@
 #SBATCH -A amuhaymin
 #SBATCH -J qp2un
 #SBATCH -N 7
-#SBATCH --ntasks=1456
+#SBATCH --ntasks=784
 #SBATCH --cpus-per-task=1
 #SBATCH --time=0-10:00:00
 #SBATCH --output=slurm-%j.out
