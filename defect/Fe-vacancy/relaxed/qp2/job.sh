@@ -3,8 +3,8 @@
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
 #SBATCH -J FeVqp2r
-#SBATCH -N 7
-#SBATCH --ntasks=784
+#SBATCH -N 6
+#SBATCH --ntasks=672
 #SBATCH --cpus-per-task=1
 #SBATCH --time=1-10:00:00
 #SBATCH --output=slurm-%j.out
@@ -22,9 +22,9 @@ module load apps/espresso/7.2-oneapi-2023.0
 
 #####mpirun pw.x -npool 5 -i 1.Fe_vac_in_ZnS.relax.qp2.in > 1.Fe_vac_in_ZnS.relax.qp2.out
 
-mpirun pw.x -npool 7 -i 2.Fe_vac_in_ZnS.scf.qp2.in > 2.Fe_vac_in_ZnS.scf.qp2.out
+###mpirun pw.x -npool 7 -i 2.Fe_vac_in_ZnS.scf.qp2.in > 2.Fe_vac_in_ZnS.scf.qp2.out
 
-mpirun pw.x -npool 7 -i 3.Fe_vac_in_ZnS.nscf.qp2.in > 3.Fe_vac_in_ZnS.nscf.qp2.out
+mpirun pw.x -npool 6 -i 3.Fe_vac_in_ZnS.nscf.qp2.in > 3.Fe_vac_in_ZnS.nscf.qp2.out
 
 mpirun -np 112 pp.x < 4.pp.in > 4.pp.out
 mpirun -np 112 dos.x < 5.dos.in > 5.dos.out

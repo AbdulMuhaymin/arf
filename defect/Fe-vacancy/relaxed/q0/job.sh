@@ -33,4 +33,5 @@ mpirun -np 112 projwfc.x < 6.projwfc.in > 6.projwfc.out
 tar -czvf 6.pdos_files.tar.gz Fe_vac_in_ZnS.q0.pdos*
 tar -tzvf 6.pdos_files.tar.gz
 rm Fe_vac_in_ZnS.q0.pdos*
+rm Fe_vac_in_ZnS.q0.pp
 rm -rf out/*/*wfc*.hdf5

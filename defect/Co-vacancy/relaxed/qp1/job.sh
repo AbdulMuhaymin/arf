@@ -22,7 +22,7 @@ module load apps/espresso/7.2-oneapi-2023.0
 
 ######mpirun pw.x -npool 5 -i 1.Co_vac_in_ZnS.relax.qp1.in > 1.Co__vac_in_ZnS.relax.qp1.out
 
-mpirun pw.x -npool 7 -i 2.Co_vac_in_ZnS.scf.qp1.in > 2.Co_vac_in_ZnS.scf.qp1.out
+#####mpirun pw.x -npool 7 -i 2.Co_vac_in_ZnS.scf.qp1.in > 2.Co_vac_in_ZnS.scf.qp1.out
 
 mpirun pw.x -npool 7 -i 3.Co_vac_in_ZnS.nscf.qp1.in > 3.Co_vac_in_ZnS.nscf.qp1.out
 
