@@ -2,7 +2,7 @@
 #SBATCH -M arf
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
-#SBATCH -J qn2HU2
+#SBATCH -J qn1HU2
 #SBATCH -N 7
 #SBATCH --ntasks=784
 #SBATCH --cpus-per-task=1
