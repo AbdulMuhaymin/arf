@@ -28,9 +28,8 @@ mpirun pw.x -npool 13 -i 3.Cu_vac_in_ZnS.nscf.q0.U2.in > 3.Cu_vac_in_ZnS.nscf.q0
 mpirun -np 112 pp.x < 4.pp.in > 4.pp.out
 mpirun -np 112 dos.x < 5.dos.in > 5.dos.out
 mpirun -np 112 projwfc.x < 6.projwfc.in > 6.projwfc.out
-
-tar -czvf 6.pdos_files.tar.gz Cu_vac_in_ZnS.q0.U2.pdos*
+tar -czvf 6.pdos_files.tar.gz Cu_vac_in_ZnS.q0.U.2.pdos*
 tar -tzvf 6.pdos_files.tar.gz
-rm Cu_vac_in_ZnS.q0.U2.pdos*
-rm Cu_vac_in_ZnS.q0.U2.pp
+rm Cu_vac_in_ZnS.q0.U.2.pdos*
+rm Cu_vac_in_ZnS.q0.U.2.pp
 
