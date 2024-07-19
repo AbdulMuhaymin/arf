@@ -3,8 +3,8 @@
 #SBATCH -p orfoz
 #SBATCH -A amuhaymin
 #SBATCH -J q0U5R
-#SBATCH -N 7
-#SBATCH --ntasks=784
+#SBATCH -N 13
+#SBATCH --ntasks=1456
 #SBATCH --cpus-per-task=1
 #SBATCH --time=2-23:00:00
 #SBATCH --output=slurm-%j.out
@@ -20,4 +20,4 @@ source /arf/sw/comp/oneapi/2023.0/setvars.sh
 module load lib/hdf5/1.14.3-oneapi-2023.0
 module load apps/espresso/7.2-oneapi-2023.0
 
-mpirun pw.x -npool 7 -i 1.Cu_vac_in_ZnS.relax.q0.U5.in > 1.Cu_vac_in_ZnS.relax.q0.U5.out
+mpirun pw.x -npool 13 -i 1.Cu_vac_in_ZnS.relax.q0.U5.in > 1.Cu_vac_in_ZnS.relax.q0.U5.out
