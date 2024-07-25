@@ -20,6 +20,7 @@ import numpy as np
 import re
 import matplotlib
 import matplotlib.pyplot as plt
+from labellines import labelLine, labelLines
 
 class calculate_E_formation:
     """ calculate formation energy of a given defect with charge transition levels and plot it.
@@ -272,10 +273,11 @@ class plot_multiple_formation_E:
         La_imp_C_poor.in_out
         La_vac_C_poor.in_out """
 
-    def __init__(self, filein, case, x_min=None, x_max=None, y_min=None, y_max=None):
+    def __init__(self, filein, case, xval, x_min=None, x_max=None, y_min=None, y_max=None):
         """initialize an instance"""
         self.filein = filein
         self.case = case
+        self.xval = xval
         self.x_range_chk = False
         if x_min != None:
             self.x_range_chk = True
@@ -308,22 +310,22 @@ class plot_multiple_formation_E:
                 label = ""
                 if 'Ni' in f_name:
                     if 'vac' in f_name:
-                        label = r'$\mathrm{Ni}_{\mathrm{Zn}}-V_{\mathrm{S}}$'
+                        label = r'$\mathrm{Ni}_{\mathrm{Zn}}$-$V_{\mathrm{S}}$'
                     else:
                         label = r'$\mathrm{Ni}_{\mathrm{Zn}}$'
                 elif 'Co' in f_name:
                     if 'vac' in f_name:
-                        label = r'$\mathrm{Co}_{\mathrm{Zn}}-V_{\mathrm{S}}$'
+                        label = r'$\mathrm{Co}_{\mathrm{Zn}}$-$V_{\mathrm{S}}$'
                     else:
                         label = r'$\mathrm{Co}_{\mathrm{Zn}}$'
                 elif 'Cu' in f_name:
                     if 'vac' in f_name:
-                        label = r'$\mathrm{Cu}_{\mathrm{Zn}}-V_{\mathrm{S}}$'
+                        label = r'$\mathrm{Cu}_{\mathrm{Zn}}$-$V_{\mathrm{S}}$'
                     else:
                         label = r'$\mathrm{Cu}_{\mathrm{Zn}}$'
                 elif 'Fe' in f_name:
                     if 'vac' in f_name:
-                        label = r'$\mathrm{Fe}_{\mathrm{Zn}}-V_{\mathrm{S}}$'
+                        label = r'$\mathrm{Fe}_{\mathrm{Zn}}$-$V_{\mathrm{S}}$'
                     else:
                         label = r'$\mathrm{Fe}_{\mathrm{Zn}}$'
                 # if 'Poor' in f_name:
@@ -335,12 +337,11 @@ class plot_multiple_formation_E:
                 data = np.genfromtxt(f_name)
                 x_data = data[:,0]
                 y_data = data[:,1]
-                axes.plot(x_data, y_data, '-', label= label)
-        axes.legend(fontsize=12)
+                axes.plot(x_data, y_data, '-', label= label, linewidth=1)
         axes.set_xlabel('Fermi Level (eV)', fontsize = 18)
         axes.set_ylabel('Formation Energy (eV)', fontsize = 18)
         axes.set_title(self.case, fontsize = 22)
-        plt.ylim(0,2)
+        plt.ylim(0,6)
         plt.xlim(0,2.06)
 
         if self.x_range_chk:
@@ -350,9 +351,11 @@ class plot_multiple_formation_E:
             plt.ylim(self.y_min, self.y_max)
 
         #fig.savefig(str(self.filein) + '.png')
-        plt.xticks(fontsize=15)
+        plt.xticks(np.arange(0, 2.065, 0.5), fontsize=15)
         plt.yticks(fontsize=15)
         plt.ylim(0)
+        labelLines(plt.gca().get_lines(), xvals=self.xval, align=False, fontsize=20)
+        #axes.legend(fontsize=12)
         plt.show(fig)
 
 class sxdefectalign_plot:
