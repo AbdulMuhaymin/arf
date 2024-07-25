@@ -28,7 +28,7 @@ mpirun -np 112 dos.x < 5.dos.in > 5.dos.out
 mpirun -np 112 projwfc.x < 6.projwfc.in > 6.projwfc.out
 
 rm out/*.hub*
-###rm out/*/wfc*.hdf5
+rm out/*/wfc*.hdf5
 tar -czvf 6.pdos_files.tar.gz Cu_vac_in_ZnS.qp1.unrlxd.U8.pdos*
 tar -tzvf 6.pdos_files.tar.gz
 rm Cu_vac_in_ZnS.qp1.unrlxd.U8.pdos*
