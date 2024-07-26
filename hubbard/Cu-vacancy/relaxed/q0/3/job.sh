@@ -6,7 +6,7 @@
 #SBATCH -N 7
 #SBATCH --ntasks=784
 #SBATCH --cpus-per-task=1
-#SBATCH --time=2-23:00:00
+#SBATCH --time=0-02:00:00
 #SBATCH --output=slurm-%j.out
 #SBATCH --error=slurm-%j.err
 
